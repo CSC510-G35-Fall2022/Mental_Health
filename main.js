@@ -1,7 +1,12 @@
 //do not delete needed for env
 require("dotenv").config();
 
-const { Client, GatewayIntentBits } = require("discord.js");
+const {
+  Client,
+  Collection,
+  Intents,
+  GatewayIntentBits,
+} = require("discord.js");
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const { EmbedBuilder } = require("discord.js");
 const { MessageEmbed } = require("discord.js");
@@ -12,26 +17,6 @@ const fs = require("fs");
 const { parse } = require("csv-parse");
 const Discord = require("discord.js");
 journalPrompts = [];
-
-// slash commands
-const commands = [
-  {
-    name: "ping",
-    description: "Replies with Pong!",
-  },
-  {
-    name: "help",
-    description: "help function for bot, lists commands",
-  },
-  {
-    name: "date",
-    description: "returns the date",
-  },
-  {
-    name: "journal",
-    description: "get a journal prompt",
-  },
-];
 
 //register slash commands
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
@@ -56,43 +41,58 @@ client.on("ready", () => {
 
 client.on("message", (msg) => {
   if (msg.author.bot) return;
-
   if (msg.content === "/journal") {
     msg.reply;
   }
 });
 
-client.on("interactionCreate", (interaction) => {
-  if (!interaction.isChatInputCommand()) return;
+const eventFiles = fs
+  .readdirSync("./events")
+  .filter((file) => file.endsWith(".js"));
 
-  if (interaction.commandName === "ping") {
-  interaction.reply("Pong!");
-   
-  }
+//referenced https://dev.to/kunal/how-to-make-a-slash-commands-bot-with-discord-js-v13-3l6k
+for (const file of eventFiles) {
+  const eventName = file.split(".")[0];
+  const event = require(`./events/${file}`);
+  client.on(eventName, (...args) => event.execute(...args, null));
+}
 
-  if (interaction.commandName === "help") {
-    interaction.reply("not yet");
-    console.log(new Date().getTime());
-  }
-  if (interaction.commandName === "date") {
-    interaction.reply(new Date().getDate().toString());
-  }
+client.commands = new Collection();
+const commands = [];
+
+// Creating a collection for commands in client
+client.commands = new Collection();
+const commandFiles = fs
+  .readdirSync("./commands")
+  .filter((file) => file.endsWith(".js"));
+
+for (const file of commandFiles) {
+  const command = require(`./commands/${file}`);
+  commands.push(command.data.toJSON());
+  client.commands.set(command.data.name, command);
+}
+
+client.on("interactionCreate", async (interaction) => {
+  if (!interaction.isCommand()) return;
   if (interaction.commandName === "journal") {
-    prompt = "prompt";
-    num = Math.floor(Math.random() * journalPrompts.length);
-    console.log(journalPrompts);
-    console.log(journalPrompts[num]);
-
-    const embed = new EmbedBuilder().setColor(0x0099FF).setTimestamp().setTitle(journalPrompts[num]).setDescription("answer this journal prompt");
-
-    
-    const messageId = interaction.reply({ embeds: [embed] });
-   // interaction.reply(journalPrompts[num]);
+    console.log("journal");
+  }
+  const command = client.commands.get(interaction.commandName);
+  if (!command) return;
+  try {
+    await command.execute(interaction, journalPrompts);
+  } catch (error) {
+    if (error) console.error(error);
+    await interaction.reply({
+      content: "There was an error while executing this command!",
+      ephemeral: true,
+    });
   }
 });
 
+// referenced: https://sebhastian.com/read-csv-javascript/
+//parses the CSV file of journal prompts
 function parseJournal() {
-  console.log("parsing journal");
   fs.createReadStream("./journalPrompts.csv")
     .pipe(parse({ delimiter: ",", from_line: 1 }))
     .on("data", function (row) {
@@ -102,9 +102,6 @@ function parseJournal() {
     .on("error", function (error) {
       console.log(error.message);
     })
-    .on("end", function () {
-      console.log("finished");
-    });
+    .on("end", function () {});
 }
-
 client.login(process.env.TOKEN);

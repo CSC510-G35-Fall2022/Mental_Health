@@ -1,22 +1,20 @@
-// import { Message } from "discord.js";
-// import { i18n } from "../utils/i18n";
-// import { canModifyQueue } from "../utils/queue";
-// import { bot } from "../index";
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { EmbedBuilder } = require("discord.js");
+const fs = require("fs");
+const { parse } = require("csv-parse");
 
-// export default {
-//   name: "loop",
-//   aliases: ["l"],
-//   description: i18n.__("loop.description"),
-//   execute(message: Message) {
-//     const queue = bot.queues.get(message.guild!.id);
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName("journal")
+    .setDescription("Replies with pong"),
+  async execute(interaction, options) {
+    num = Math.floor(Math.random() * options.length);
 
-//     if (!queue) return message.reply(i18n.__("loop.errorNotQueue")).catch(console.error);
-//     if (!canModifyQueue(message.member!)) return i18n.__("common.errorNotChannel");
+    const embed = new EmbedBuilder()
+      .setColor(0x0099ff)
+      .setTitle(options[num])
+      .setDescription("answer this journal prompt");
 
-//     queue.loop = !queue.loop;
-
-//     return message
-//       .reply(i18n.__mf("loop.result", { loop: queue.loop ? i18n.__("common.on") : i18n.__("common.off") }))
-//       .catch(console.error);
-//   }
-// };
+    const messageId = interaction.reply({ embeds: [embed] });
+  },
+};
