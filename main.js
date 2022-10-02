@@ -12,39 +12,21 @@ const { EmbedBuilder } = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const { REST, Routes } = require("discord.js");
 const clientId = process.env.CLIENT_ID;
-const guildId = "1011989055736660061";
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const Discord = require("discord.js");
+const guilds = ["1011989055736660061"];
 journalPrompts = [];
 
+//do not edit until you see an edit from here message again
 //register slash commands
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
 
-async () => {
-  try {
-    console.log("Started refreshing application (/) commands.");
-
-    await rest.put(Routes.applicationCommands(clientId), { body: commands });
-
-    console.log("Successfully reloaded application (/) commands.");
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-// run bot
-client.on("ready", () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-  parseJournal();
-});
-
-client.on("message", (msg) => {
-  if (msg.author.bot) return;
-  if (msg.content === "/journal") {
-    msg.reply;
-  }
-});
+// Creating a collection for commands in client
+client.commands = new Collection();
+const commandFiles = fs
+  .readdirSync("./commands")
+  .filter((file) => file.endsWith(".js"));
 
 const eventFiles = fs
   .readdirSync("./events")
@@ -60,17 +42,43 @@ for (const file of eventFiles) {
 client.commands = new Collection();
 const commands = [];
 
-// Creating a collection for commands in client
-client.commands = new Collection();
-const commandFiles = fs
-  .readdirSync("./commands")
-  .filter((file) => file.endsWith(".js"));
-
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   commands.push(command.data.toJSON());
   client.commands.set(command.data.name, command);
 }
+
+// do not remove this
+guilds.forEach(async (guildID) => {
+  try {
+    console.log("Started refreshing application (/) commands.");
+    console.log(guildID)
+    console.log(clientId)
+    await rest.put(Routes.applicationCommands(clientId, guildID), {
+      body: commands,
+    });
+    console.log(commands)
+    console.log("Successfully reloaded application (/) commands.");
+  } catch (error) {
+    console.error("from this");
+    console.error(error);
+  }
+});
+
+//edit from here
+// run bot
+client.on("ready", () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+  parseJournal();
+});
+
+
+client.on("message", (msg) => {
+  if (msg.author.bot) return;
+  if (msg.content === "/journal") {
+    msg.reply;
+  }
+});
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
