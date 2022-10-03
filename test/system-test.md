@@ -1,0 +1,5 @@
+| Test Id        | Description                                                                       | Expected output                                                                       | Actual output |   |
+|----------------|-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------|---|
+| journalPrompts | Discord is open and the bot is running. The user types '/journal' into the chat.  | The bot responds with one of the given journal prompts in an embedded message format. |               |   |
+|                |                                                                                   |                                                                                       |               |   |
+|                |                                                                                   |                                                                                       |               |   |
