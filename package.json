@@ -17,6 +17,6 @@
   },
   "scripts": {
     "test": "standard && node my-tests.js",
-    "test_commands": "jest"
+    "test_commands": "jest --coverage"
   }
 }
