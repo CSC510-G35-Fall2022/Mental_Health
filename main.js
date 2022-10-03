@@ -70,8 +70,8 @@ guilds.forEach(async (guildID) => {
 // run bot
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  parseJournal();
-  parseSupportAnimals();
+  parseCSV("./data/journalPrompts.csv", journalPrompts);
+  parseCSV("./data/supportanimals.csv", supportAnimals);
 });
 
 client.on("message", (msg) => {
@@ -110,16 +110,28 @@ client.on("interactionCreate", async (interaction) => {
       });
     }
   }
+
+  if ((interaction.commandName === "ping")) {
+    try {
+      await command.execute(interaction);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
 });
 
 // referenced: https://sebhastian.com/read-csv-javascript/
 //parses the CSV file of journal prompts
-function parseJournal() {
-  fs.createReadStream("./journalPrompts.csv")
+function parseCSV(csvfile, list) {
+  fs.createReadStream(csvfile)
     .pipe(parse({ delimiter: ",", from_line: 1 }))
     .on("data", function (row) {
       prompt = row.toString();
-      journalPrompts.push(row[0]);
+      list.push(row[0]);
     })
     .on("error", function (error) {
       console.log(error.message);
@@ -127,16 +139,4 @@ function parseJournal() {
     .on("end", function () {});
 }
 
-function parseSupportAnimals() {
-  fs.createReadStream("./data/supportanimals.csv")
-    .pipe(parse({ delimiter: ",", from_line: 1 }))
-    .on("data", function (row) {
-      prompt = row.toString();
-      supportAnimals.push(row[0]);
-    })
-    .on("error", function (error) {
-      console.log(error.message);
-    })
-    .on("end", function () {});
-}
 client.login(process.env.TOKEN);
