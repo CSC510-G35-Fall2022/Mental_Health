@@ -17,6 +17,7 @@ const { parse } = require("csv-parse");
 const Discord = require("discord.js");
 const guilds = ["1011989055736660061"];
 journalPrompts = [];
+supportAnimals = [];
 
 //do not edit until you see an edit from here message again
 //register slash commands
@@ -52,12 +53,12 @@ for (const file of commandFiles) {
 guilds.forEach(async (guildID) => {
   try {
     console.log("Started refreshing application (/) commands.");
-    console.log(guildID)
-    console.log(clientId)
+    console.log(guildID);
+    console.log(clientId);
     await rest.put(Routes.applicationCommands(clientId, guildID), {
       body: commands,
     });
-    console.log(commands)
+    console.log(commands);
     console.log("Successfully reloaded application (/) commands.");
   } catch (error) {
     console.error("from this");
@@ -70,8 +71,8 @@ guilds.forEach(async (guildID) => {
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   parseJournal();
+  parseSupportAnimals();
 });
-
 
 client.on("message", (msg) => {
   if (msg.author.bot) return;
@@ -82,19 +83,32 @@ client.on("message", (msg) => {
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
-  if (interaction.commandName === "journal") {
-    console.log("journal");
-  }
+  console.log((interaction.commandName))
+
   const command = client.commands.get(interaction.commandName);
-  if (!command) return;
-  try {
-    await command.execute(interaction, journalPrompts);
-  } catch (error) {
-    if (error) console.error(error);
-    await interaction.reply({
-      content: "There was an error while executing this command!",
-      ephemeral: true,
-    });
+
+  if ((interaction.commandName === "support_animal")) {
+    try {
+      await command.execute(interaction, supportAnimals);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
+
+  if ((interaction.commandName === "journal")) {
+    try {
+      await command.execute(interaction, journalPrompts);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
   }
 });
 
@@ -106,6 +120,19 @@ function parseJournal() {
     .on("data", function (row) {
       prompt = row.toString();
       journalPrompts.push(row[0]);
+    })
+    .on("error", function (error) {
+      console.log(error.message);
+    })
+    .on("end", function () {});
+}
+
+function parseSupportAnimals() {
+  fs.createReadStream("./data/supportanimals.csv")
+    .pipe(parse({ delimiter: ",", from_line: 1 }))
+    .on("data", function (row) {
+      prompt = row.toString();
+      supportAnimals.push(row[0]);
     })
     .on("error", function (error) {
       console.log(error.message);
