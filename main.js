@@ -122,6 +122,17 @@ client.on("interactionCreate", async (interaction) => {
       });
     }
   }
+  if ((interaction.commandName === "help")) {
+    try {
+      await command.execute(interaction);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
 });
 
 // referenced: https://sebhastian.com/read-csv-javascript/
