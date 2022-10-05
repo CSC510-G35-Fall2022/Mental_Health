@@ -4,6 +4,7 @@
     "discord-interactions": "^3.2.0",
     "discord.js": "^14.3.0",
     "dotenv": "^16.0.2",
+    
     "jest-discordjs-mocks": "^1.0.2"
   },
   "devDependencies": {
