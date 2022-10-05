@@ -5,16 +5,15 @@ const { parse } = require("csv-parse");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("journal")
-    .setDescription("gives a jouranling prompt"),
+    .setName("diet_recommendation")
+    .setDescription("gives a diet tip"),
   async execute(interaction, options) {
     num = Math.floor(Math.random() * options.length);
-
+    console.log(options);
     const embed = new EmbedBuilder()
-      .setColor(0x0099ff)
-      .setTitle(options[num][0])
-      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
-      .setDescription("answer this journal prompt");
+      .setColor(0x2596be)
+      // .setTitle(options[num])
+      .setDescription("test");
 
     const messageId = interaction.reply({ embeds: [embed] });
   },

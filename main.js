@@ -15,9 +15,11 @@ const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const Discord = require("discord.js");
+const diet_rec = require("./commands/diet_rec");
 const guilds = ["1011989055736660061"];
 journalPrompts = [];
 supportAnimals = [];
+dietRecs = [];
 
 //do not edit until you see an edit from here message again
 //register slash commands
@@ -72,6 +74,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   parseCSV("./data/journalPrompts.csv", journalPrompts);
   parseCSV("./data/supportanimals.csv", supportAnimals);
+  parseCSV("./data/diet_recs.csv", dietRecs);
 });
 
 client.on("message", (msg) => {
@@ -90,6 +93,18 @@ client.on("interactionCreate", async (interaction) => {
   if ((interaction.commandName === "support_animal")) {
     try {
       await command.execute(interaction, supportAnimals);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
+
+  if ((interaction.commandName === "diet_recommendation")) {
+    try {
+      await command.execute(interaction, dietRecs);
     } catch (error) {
       if (error) console.error(error);
       await interaction.reply({
@@ -142,7 +157,7 @@ function parseCSV(csvfile, list) {
     .pipe(parse({ delimiter: ",", from_line: 1 }))
     .on("data", function (row) {
       prompt = row.toString();
-      list.push(row[0]);
+      list.push(row);
     })
     .on("error", function (error) {
       console.log(error.message);
