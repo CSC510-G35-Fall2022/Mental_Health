@@ -1,9 +1,10 @@
 {
   "dependencies": {
     "csv-parse": "^5.3.0",
-    "discord.js": "^14.3.0",
+    "discord.js": "^14.5.0",
     "dotenv": "^16.0.2",
-    "jest-discordjs-mocks": "^1.0.2"
+    "jest-discordjs-mocks": "^1.0.2",
+    "snowflake-sdk": "^1.6.13"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
@@ -18,5 +19,9 @@
   "scripts": {
     "test": "standard && node my-tests.js",
     "test_commands": "jest --coverage"
+  },
+  "jest": {
+    
+
   }
 }

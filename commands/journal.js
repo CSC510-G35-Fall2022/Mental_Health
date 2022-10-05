@@ -6,7 +6,7 @@ const { parse } = require("csv-parse");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("journal")
-    .setDescription("Replies with pong"),
+    .setDescription("Replies with a journal prompt"),
   async execute(interaction, options) {
     num = Math.floor(Math.random() * options.length);
 
