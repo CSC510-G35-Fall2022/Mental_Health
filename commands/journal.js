@@ -7,9 +7,9 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("journal")
     .setDescription("Replies with pong"),
-  async execute(interaction, options) {
-    num = Math.floor(Math.random() * options.length);
-
+  async execute(client, message, interaction, options) {
+    let num = Math.floor(Math.random() * options.length);
+  console.log('interaction\n', interaction);
     const embed = new EmbedBuilder()
       .setColor(0x0099ff)
       .setTitle(options[num])
