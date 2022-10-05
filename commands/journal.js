@@ -1,7 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { EmbedBuilder } = require("discord.js");
-const fs = require("fs");
-const { parse } = require("csv-parse");
 
 module.exports = {
   data: new SlashCommandBuilder()
