@@ -15,9 +15,11 @@ const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const Discord = require("discord.js");
+const diet_rec = require("./commands/diet_rec");
 const guilds = ["1011989055736660061"];
 journalPrompts = [];
 supportAnimals = [];
+dietRecs = [];
 
 //do not edit until you see an edit from here message again
 //register slash commands
@@ -70,8 +72,9 @@ guilds.forEach(async (guildID) => {
 // run bot
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  parseCSV("./data/journalPrompts.csv", journalPrompts);
-  parseCSV("./data/supportanimals.csv", supportAnimals);
+  parseCSV("./data/journalPrompts.csv", journalPrompts, "\n");
+  parseCSV("./data/supportanimals.csv", supportAnimals, ",");
+  parseCSV("./data/diet_recs.csv", dietRecs, "|");
 });
 
 client.on("message", (msg) => {
@@ -99,14 +102,24 @@ client.on("interactionCreate", async (interaction) => {
     }
   }
 
+  if ((interaction.commandName === "diet_recommendation")) {
+    try {
+      await command.execute(interaction, dietRecs);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
+
   if ((interaction.commandName === "journal")) {
     try {
-      console.log(journalPrompts.length);
       let num = Math.floor(Math.random() * journalPrompts.length);
-
       const embed = new EmbedBuilder()
       .setColor(0x0099ff)
-      .setTitle(journalPrompts[num])
+      .setTitle(journalPrompts[num].toString())
       .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
       .setDescription("answer this journal prompt");
       await command.execute(interaction, embed);
@@ -145,12 +158,12 @@ client.on("interactionCreate", async (interaction) => {
 
 // referenced: https://sebhastian.com/read-csv-javascript/
 //parses the CSV file of journal prompts
-function parseCSV(csvfile, list) {
+function parseCSV(csvfile, list, delim) {
   fs.createReadStream(csvfile)
-    .pipe(parse({ delimiter: "\n", from_line: 1 }))
+    .pipe(parse({ delimiter: delim, from_line: 1 }))
     .on("data", function (row) {
       prompt = row.toString();
-      list.push(row[0]);
+      list.push(row);
 
     })
     .on("error", function (error) {
