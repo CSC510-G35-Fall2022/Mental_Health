@@ -4,10 +4,11 @@ const { EmbedBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("journal")
-    .setDescription("gives a jouranling prompt"),
+    .setDescription("Replies with pong"),
+
   async execute(interaction, options) {
     num = Math.floor(Math.random() * options.length);
-
+  console.log('interaction\n', interaction);
     const embed = new EmbedBuilder()
       .setColor(0x0099ff)
       .setTitle(options[num][0])

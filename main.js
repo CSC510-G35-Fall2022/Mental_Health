@@ -60,11 +60,11 @@ guilds.forEach(async (guildID) => {
     await rest.put(Routes.applicationCommands(clientId, guildID), {
       body: commands,
     });
-    console.log(commands);
+    // console.log(commands);
     console.log("Successfully reloaded application (/) commands.");
   } catch (error) {
     console.error("from this");
-    console.error(error);
+    console.error("error", error);
   }
 });
 
@@ -72,7 +72,7 @@ guilds.forEach(async (guildID) => {
 // run bot
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  parseCSV("./data/journalPrompts.csv", journalPrompts, ",");
+  parseCSV("./data/journalPrompts.csv", journalPrompts, "|||");
   parseCSV("./data/supportanimals.csv", supportAnimals, ",");
   parseCSV("./data/diet_recs.csv", dietRecs, "|");
 });
@@ -86,7 +86,7 @@ client.on("message", (msg) => {
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
-  console.log((interaction.commandName))
+  // console.log((interaction.commandName))
 
   const command = client.commands.get(interaction.commandName);
 
@@ -116,6 +116,7 @@ client.on("interactionCreate", async (interaction) => {
 
   if ((interaction.commandName === "journal")) {
     try {
+
       await command.execute(interaction, journalPrompts);
     } catch (error) {
       if (error) console.error(error);
@@ -158,9 +159,10 @@ function parseCSV(csvfile, list, delim) {
     .on("data", function (row) {
       prompt = row.toString();
       list.push(row);
+
     })
     .on("error", function (error) {
-      console.log(error.message);
+      console.log("error", error.message);
     })
     .on("end", function () {});
 }
