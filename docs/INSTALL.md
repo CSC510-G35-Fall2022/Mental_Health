@@ -9,19 +9,20 @@ npm install discord.js
 npm i dotenv --save
 ```
 
+
 For Style Checker (in local directory): 
 ```
 npm install standard --save-dev
 ```
 
-
-
-
-
-
-
-
 Testing the commands:
+
+Install jest: 
+
+```
+npm install --save-dev jest
+```
+
 ```
 npm run test_commands
 ```
