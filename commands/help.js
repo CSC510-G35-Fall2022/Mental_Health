@@ -11,11 +11,11 @@ module.exports = {
             const commandFiles=fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
             for (const file of commandFiles) {
                 const command = require(`./${file}`);
-                str += `Name: ${command.data.name},\n Description: ${command.data.description} \n\n`;
+                str += `Name: ${command.data.name}\n Description: ${command.data.description} \n\n`;
             }
             const embed = new EmbedBuilder()
             .setColor(0x0099ff)
-            .setTitle("Names of Commands")
+            .setTitle("Names of Commands: Just add a / before every command.\nFor Example: /help")
             .setDescription(str);
             return interaction.reply({
                 embeds: [embed]
