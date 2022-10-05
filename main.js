@@ -20,6 +20,7 @@ const guilds = ["1011989055736660061"];
 journalPrompts = [];
 supportAnimals = [];
 dietRecs = [];
+exercise = [];
 
 //do not edit until you see an edit from here message again
 //register slash commands
@@ -75,6 +76,7 @@ client.on("ready", () => {
   parseCSV("./data/journalPrompts.csv", journalPrompts, "|||");
   parseCSV("./data/supportanimals.csv", supportAnimals, ",");
   parseCSV("./data/diet_recs.csv", dietRecs, "|");
+  parseCSV("./data/exercise.csv", exercise, "|")
 });
 
 client.on("message", (msg) => {
@@ -141,6 +143,18 @@ client.on("interactionCreate", async (interaction) => {
   if ((interaction.commandName === "help")) {
     try {
       await command.execute(interaction);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
+
+  if ((interaction.commandName === "exercise")) {
+    try {
+      await command.execute(interaction, exercise);
     } catch (error) {
       if (error) console.error(error);
       await interaction.reply({
