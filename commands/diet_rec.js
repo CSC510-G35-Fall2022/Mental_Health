@@ -12,9 +12,8 @@ module.exports = {
     console.log(options);
     const embed = new EmbedBuilder()
       .setColor(0x2596be)
-      // .setTitle(options[num])
-      .setDescription("test");
-
+      .setTitle(options[num][0])
+      .setDescription(options[num][1] + "\nRead more at: " + options[num][2]);
     const messageId = interaction.reply({ embeds: [embed] });
   },
 };

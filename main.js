@@ -72,9 +72,9 @@ guilds.forEach(async (guildID) => {
 // run bot
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  parseCSV("./data/journalPrompts.csv", journalPrompts);
-  parseCSV("./data/supportanimals.csv", supportAnimals);
-  parseCSV("./data/diet_recs.csv", dietRecs);
+  parseCSV("./data/journalPrompts.csv", journalPrompts, ",");
+  parseCSV("./data/supportanimals.csv", supportAnimals, ",");
+  parseCSV("./data/diet_recs.csv", dietRecs, "|");
 });
 
 client.on("message", (msg) => {
@@ -152,9 +152,9 @@ client.on("interactionCreate", async (interaction) => {
 
 // referenced: https://sebhastian.com/read-csv-javascript/
 //parses the CSV file of journal prompts
-function parseCSV(csvfile, list) {
+function parseCSV(csvfile, list, delim) {
   fs.createReadStream(csvfile)
-    .pipe(parse({ delimiter: ",", from_line: 1 }))
+    .pipe(parse({ delimiter: delim, from_line: 1 }))
     .on("data", function (row) {
       prompt = row.toString();
       list.push(row);
