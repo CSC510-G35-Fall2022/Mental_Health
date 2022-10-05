@@ -58,11 +58,11 @@ guilds.forEach(async (guildID) => {
     await rest.put(Routes.applicationCommands(clientId, guildID), {
       body: commands,
     });
-    console.log(commands);
+    // console.log(commands);
     console.log("Successfully reloaded application (/) commands.");
   } catch (error) {
     console.error("from this");
-    console.error(error);
+    console.error("error", error);
   }
 });
 
@@ -83,7 +83,7 @@ client.on("message", (msg) => {
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
-  console.log((interaction.commandName))
+  // console.log((interaction.commandName))
 
   const command = client.commands.get(interaction.commandName);
 
@@ -101,7 +101,15 @@ client.on("interactionCreate", async (interaction) => {
 
   if ((interaction.commandName === "journal")) {
     try {
-      await command.execute(interaction, journalPrompts);
+      console.log(journalPrompts.length);
+      let num = Math.floor(Math.random() * journalPrompts.length);
+
+      const embed = new EmbedBuilder()
+      .setColor(0x0099ff)
+      .setTitle(journalPrompts[num])
+      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
+      .setDescription("answer this journal prompt");
+      await command.execute(interaction, embed);
     } catch (error) {
       if (error) console.error(error);
       await interaction.reply({
@@ -139,13 +147,14 @@ client.on("interactionCreate", async (interaction) => {
 //parses the CSV file of journal prompts
 function parseCSV(csvfile, list) {
   fs.createReadStream(csvfile)
-    .pipe(parse({ delimiter: ",", from_line: 1 }))
+    .pipe(parse({ delimiter: "\n", from_line: 1 }))
     .on("data", function (row) {
       prompt = row.toString();
       list.push(row[0]);
+
     })
     .on("error", function (error) {
-      console.log(error.message);
+      console.log("error", error.message);
     })
     .on("end", function () {});
 }
