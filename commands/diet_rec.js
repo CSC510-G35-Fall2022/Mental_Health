@@ -3,17 +3,14 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("journal")
-    .setDescription("gives a jouranling prompt"),
+    .setName("diet_recommendation")
+    .setDescription("gives a diet tip"),
   async execute(interaction, options) {
     num = Math.floor(Math.random() * options.length);
-
     const embed = new EmbedBuilder()
-      .setColor(0x0099ff)
+      .setColor(0x2596be)
       .setTitle(options[num][0])
-      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
-      .setDescription("answer this journal prompt");
-
+      .setDescription(options[num][1] + "\nRead more at: " + options[num][2]);
     const messageId = interaction.reply({ embeds: [embed] });
   },
 };
