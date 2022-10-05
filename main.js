@@ -72,7 +72,7 @@ guilds.forEach(async (guildID) => {
 // run bot
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  parseCSV("./data/journalPrompts.csv", journalPrompts, "\n");
+  parseCSV("./data/journalPrompts.csv", journalPrompts, "|||");
   parseCSV("./data/supportanimals.csv", supportAnimals, ",");
   parseCSV("./data/diet_recs.csv", dietRecs, "|");
 });
@@ -116,13 +116,8 @@ client.on("interactionCreate", async (interaction) => {
 
   if ((interaction.commandName === "journal")) {
     try {
-      let num = Math.floor(Math.random() * journalPrompts.length);
-      const embed = new EmbedBuilder()
-      .setColor(0x0099ff)
-      .setTitle(journalPrompts[num].toString())
-      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
-      .setDescription("answer this journal prompt");
-      await command.execute(interaction, embed);
+
+      await command.execute(interaction, journalPrompts);
     } catch (error) {
       if (error) console.error(error);
       await interaction.reply({
