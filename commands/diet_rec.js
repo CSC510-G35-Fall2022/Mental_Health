@@ -7,7 +7,6 @@ module.exports = {
     .setDescription("gives a diet tip"),
   async execute(interaction, options) {
     num = Math.floor(Math.random() * options.length);
-    console.log(options);
     const embed = new EmbedBuilder()
       .setColor(0x2596be)
       .setTitle(options[num][0])
