@@ -15,7 +15,9 @@ const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const Discord = require("discord.js");
+//const exercise = require("./exercise");
 const guilds = ["1011989055736660061"];
+exercise = [];
 journalPrompts = [];
 supportAnimals = [];
 
@@ -72,6 +74,7 @@ client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
   parseCSV("./data/journalPrompts.csv", journalPrompts);
   parseCSV("./data/supportanimals.csv", supportAnimals);
+  parseCSV("./data/exercise.csv", exercise);
 });
 
 client.on("message", (msg) => {
@@ -114,6 +117,18 @@ client.on("interactionCreate", async (interaction) => {
   if ((interaction.commandName === "ping")) {
     try {
       await command.execute(interaction);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
+
+  if ((interaction.commandName === "exercise")) {
+    try {
+      await command.execute(interaction, exercise);
     } catch (error) {
       if (error) console.error(error);
       await interaction.reply({
