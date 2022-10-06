@@ -1,7 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { EmbedBuilder } = require("discord.js");
-const fs = require("fs");
-const { parse } = require("csv-parse");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -13,7 +11,7 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setColor("#FFFFFF")
       .setTitle("You got this!")
-      .setImage(options[num])
+      .setImage(options[num][0])
     const messageId = interaction.reply({ embeds: [embed] });
   },
 };
