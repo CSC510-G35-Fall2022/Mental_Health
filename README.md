@@ -15,6 +15,12 @@ The following functionalities are up and running:
 **Support Animals Command**
 
 
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.25%20PM.png" width=700>
+<br/>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.16%20PM.png" width=700>
+
+
+
 
 
 ## Install instructions
