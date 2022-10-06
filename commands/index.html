@@ -1,0 +1,9 @@
+<!doctype html>
+<script type="module">
+    import JournalCommand, { getData as getJournalData } from "./journal.js";
+    import PingCommand, { getData as getPingData } from "./ping.js";
+    import HelpCommand, { getData as getHelpData } from "./help.js";
+    export { JournalCommand, PingCommand, HelpCommand };
+
+    export default [getJournalData, getPingData, getHelpData];
+</script>
