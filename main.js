@@ -16,6 +16,7 @@ const fs = require("fs");
 const { parse } = require("csv-parse");
 const Discord = require("discord.js");
 const diet_rec = require("./commands/diet_rec");
+const { SystemChannelFlags } = require("discord.js");
 const guilds = ["1011989055736660061"];
 journalPrompts = [];
 supportAnimals = [];
@@ -85,68 +86,93 @@ client.on("message", (msg) => {
 });
 
 client.on("interactionCreate", async (interaction) => {
-  if (!interaction.isCommand()) return;
-  // console.log((interaction.commandName))
 
-  const command = client.commands.get(interaction.commandName);
+  if (interaction.isCommand()){
+    const command = client.commands.get(interaction.commandName);
 
-  if ((interaction.commandName === "support_animal")) {
-    try {
-      await command.execute(interaction, supportAnimals);
-    } catch (error) {
-      if (error) console.error(error);
-      await interaction.reply({
-        content: "There was an error while executing this command!",
-        ephemeral: true,
-      });
+    console.log(command)
+
+    if ((interaction.commandName === "support_animal")) {
+      try {
+        await command.execute(interaction, supportAnimals);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    }
+    else if ((interaction.commandName === "diet_recommendation")) {
+      try {
+        await command.execute(interaction, dietRecs);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    }
+    else if ((interaction.commandName === "journal")) {
+      try {
+        await command.execute(interaction, journalPrompts);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    }
+    else if ((interaction.commandName === "ping")) {
+      try {
+        await command.execute(interaction);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    }
+    else if ((interaction.commandName === "help")) {
+      try {
+        await command.execute(interaction);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    }
+    else if(interaction.commandName == "puzzle"){
+      try {
+        await command.execute(interaction);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
     }
   }
-
-  if ((interaction.commandName === "diet_recommendation")) {
-    try {
-      await command.execute(interaction, dietRecs);
-    } catch (error) {
-      if (error) console.error(error);
-      await interaction.reply({
-        content: "There was an error while executing this command!",
-        ephemeral: true,
-      });
-    }
-  }
-
-  if ((interaction.commandName === "journal")) {
-    try {
-
-      await command.execute(interaction, journalPrompts);
-    } catch (error) {
-      if (error) console.error(error);
-      await interaction.reply({
-        content: "There was an error while executing this command!",
-        ephemeral: true,
-      });
-    }
-  }
-
-  if ((interaction.commandName === "ping")) {
-    try {
-      await command.execute(interaction);
-    } catch (error) {
-      if (error) console.error(error);
-      await interaction.reply({
-        content: "There was an error while executing this command!",
-        ephemeral: true,
-      });
-    }
-  }
-  if ((interaction.commandName === "help")) {
-    try {
-      await command.execute(interaction);
-    } catch (error) {
-      if (error) console.error(error);
-      await interaction.reply({
-        content: "There was an error while executing this command!",
-        ephemeral: true,
-      });
+  else if (interaction.isMessageComponent()) {
+    const command = client.commands.get(interaction.message.interaction.commandName);
+    //console.log(command);
+    //console.log(interaction);
+    if(interaction.message.interaction.commandName == "puzzle"){
+      try {
+        await command.updateBoard(interaction);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
     }
   }
 });
