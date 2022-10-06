@@ -3,7 +3,8 @@
 <br/>
 
 ### Purpose
-To incorporate aspects of mental well-being into discord usage. 
+To incorporate aspects of mental well-being into discord usage. Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Certain functionalities such as reminding users to take a break and other functionalities that require a database have not yet been implemented. Below is a list of working functionalities as well as install and contributing instructions. 
+
 The following functionalities are up and running:
 
 **Journal Command**
