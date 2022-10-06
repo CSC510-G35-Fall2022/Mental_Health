@@ -15,9 +15,11 @@ const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const Discord = require("discord.js");
+const diet_rec = require("./commands/diet_rec");
 const guilds = ["1011989055736660061"];
 journalPrompts = [];
 supportAnimals = [];
+dietRecs = [];
 
 //do not edit until you see an edit from here message again
 //register slash commands
@@ -58,11 +60,11 @@ guilds.forEach(async (guildID) => {
     await rest.put(Routes.applicationCommands(clientId, guildID), {
       body: commands,
     });
-    console.log(commands);
+    // console.log(commands);
     console.log("Successfully reloaded application (/) commands.");
   } catch (error) {
     console.error("from this");
-    console.error(error);
+    console.error("error", error);
   }
 });
 
@@ -70,8 +72,9 @@ guilds.forEach(async (guildID) => {
 // run bot
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  parseCSV("./data/journalPrompts.csv", journalPrompts);
-  parseCSV("./data/supportanimals.csv", supportAnimals);
+  parseCSV("./data/journalPrompts.csv", journalPrompts, "|||");
+  parseCSV("./data/supportanimals.csv", supportAnimals, ",");
+  parseCSV("./data/diet_recs.csv", dietRecs, "|");
 });
 
 client.on("message", (msg) => {
@@ -83,7 +86,7 @@ client.on("message", (msg) => {
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.isCommand()) return;
-  console.log((interaction.commandName))
+  // console.log((interaction.commandName))
 
   const command = client.commands.get(interaction.commandName);
 
@@ -99,8 +102,21 @@ client.on("interactionCreate", async (interaction) => {
     }
   }
 
+  if ((interaction.commandName === "diet_recommendation")) {
+    try {
+      await command.execute(interaction, dietRecs);
+    } catch (error) {
+      if (error) console.error(error);
+      await interaction.reply({
+        content: "There was an error while executing this command!",
+        ephemeral: true,
+      });
+    }
+  }
+
   if ((interaction.commandName === "journal")) {
     try {
+
       await command.execute(interaction, journalPrompts);
     } catch (error) {
       if (error) console.error(error);
@@ -137,15 +153,16 @@ client.on("interactionCreate", async (interaction) => {
 
 // referenced: https://sebhastian.com/read-csv-javascript/
 //parses the CSV file of journal prompts
-function parseCSV(csvfile, list) {
+function parseCSV(csvfile, list, delim) {
   fs.createReadStream(csvfile)
-    .pipe(parse({ delimiter: ",", from_line: 1 }))
+    .pipe(parse({ delimiter: delim, from_line: 1 }))
     .on("data", function (row) {
       prompt = row.toString();
-      list.push(row[0]);
+      list.push(row);
+
     })
     .on("error", function (error) {
-      console.log(error.message);
+      console.log("error", error.message);
     })
     .on("end", function () {});
 }
