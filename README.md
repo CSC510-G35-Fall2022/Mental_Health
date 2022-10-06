@@ -20,8 +20,12 @@ The following functionalities are up and running:
 <br/>
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.16%20PM.png" width=700>
 
+**Puzzle Command**
 
 
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.40%20AM.png" width=700>
+
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.44%20AM.png" width=700>
 
 
 ## Install instructions
