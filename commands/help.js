@@ -11,23 +11,23 @@ module.exports = {
     const commandFiles = fs
       .readdirSync("./commands")
       .filter((file) => file.endsWith(".js"));
-        var fields = [];
-        
+    var fields = [];
+
     for (const file of commandFiles) {
       const command = require(`./${file}`);
-      fields.push({name: `/${command.data.name}\n`, value: `${command.data.description}`});
+      fields.push({
+        name: `/${command.data.name}\n`,
+        value: `${command.data.description}`,
+      });
     }
     console.log(fields);
     const embed = new EmbedBuilder()
-      .setColor(0x0099ff)
+      .setColor(0x746abd)
       .setTitle(
-        "Names of Commands: Just add a / before every command.\nFor Example: /help"
+        "List of slash commands and what each one does. Just type exactly what you see including the / \nFor Example: /help"
       )
       .addFields(fields);
 
-
-
-        
     return interaction.reply({
       embeds: [embed],
     });
