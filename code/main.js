@@ -4,19 +4,14 @@ require("dotenv").config();
 const {
   Client,
   Collection,
-  Intents,
   GatewayIntentBits,
 } = require("discord.js");
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const { EmbedBuilder } = require("discord.js");
-const { MessageEmbed } = require("discord.js");
 const { REST, Routes } = require("discord.js");
 const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 const { parse } = require("csv-parse");
-const Discord = require("discord.js");
-const diet_rec = require("./commands/diet_rec");
-const { SystemChannelFlags } = require("discord.js");
 const guilds = ["1011989055736660061"];
 journalPrompts = [];
 supportAnimals = [];
@@ -39,7 +34,7 @@ const eventFiles = fs
 //referenced https://dev.to/kunal/how-to-make-a-slash-commands-bot-with-discord-js-v13-3l6k
 for (const file of eventFiles) {
   const eventName = file.split(".")[0];
-  const event = require(`./events/${file}`);
+  const event = require(`../events/${file}`);
   client.on(eventName, (...args) => event.execute(...args, null));
 }
 
@@ -47,7 +42,7 @@ client.commands = new Collection();
 const commands = [];
 
 for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
+  const command = require(`../commands/${file}`);
   commands.push(command.data.toJSON());
   client.commands.set(command.data.name, command);
 }
