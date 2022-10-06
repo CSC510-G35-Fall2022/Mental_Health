@@ -39,3 +39,4 @@ Used parts of https://github.com/atom/atom/blob/master/CONTRIBUTING.md
 -Bug #2
 
 ## Enhancements
+-
