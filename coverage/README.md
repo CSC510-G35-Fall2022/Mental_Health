@@ -1,6 +1,6 @@
-# COVERAGE
-
 [![coverage][coverage]][coverage-url]
+
+# COVERAGE
 
 Provides with code coverage metric.
 
