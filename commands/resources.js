@@ -18,7 +18,7 @@ module.exports = {
     .setDescription("Provides Mental Health resources and contacts"),
   /**
    * Executes the resources command
-   * 
+   *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
@@ -27,7 +27,8 @@ module.exports = {
     let str;
     str = ``;
     var fields = [];
-    str="National Suicide Prevention Hotline: Call 1-800-273-8255. \n\nCrisis Text Line: Text HOME to 741741 \n\nThe Substance Abuse and Mental Health Services Administration(SAMHSA) National Helpline: Call 1-800-662-HELP (4357).\n\n Get involved with Mental Health America: https://mhanational.org/about \n\n"
+    str =
+      "National Suicide Prevention Hotline: Call 1-800-273-8255. \n\nCrisis Text Line: Text HOME to 741741 \n\nThe Substance Abuse and Mental Health Services Administration(SAMHSA) National Helpline: Call 1-800-662-HELP (4357).\n\n Get involved with Mental Health America: https://mhanational.org/about \n\n";
     /**
      * Embedded object
      *
@@ -39,9 +40,7 @@ module.exports = {
      */
     const embed = new EmbedBuilder()
       .setColor(0x746abd)
-      .setTitle(
-        "Resources that provide emotional, mental support"
-      )
+      .setTitle("Resources that provide emotional, mental support")
       .setDescription(str);
     return interaction.reply({
       embeds: [embed],

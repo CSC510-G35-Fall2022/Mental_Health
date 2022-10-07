@@ -18,7 +18,7 @@ module.exports = {
     .setDescription("See an image of an adorable support animal"),
   /**
    * Executes the support_animal command
-   * 
+   *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
@@ -39,7 +39,7 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setColor("#FFFFFF")
       .setTitle("You got this!")
-      .setImage(options[num][0])
+      .setImage(options[num][0]);
     const messageId = interaction.reply({ embeds: [embed] });
   },
 };

@@ -19,7 +19,7 @@ module.exports = {
     .setDescription("Provides Names and Description of commands"),
   /**
    * Executes the help command
-   * 
+   *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction

@@ -6,7 +6,6 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
  * @exports diet_recommendation
  */
 module.exports = {
-
   /**
    * Slash command for diet recommendations
    *
@@ -21,7 +20,7 @@ module.exports = {
 
   /**
    * Executes the diet slash command
-   * 
+   *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
