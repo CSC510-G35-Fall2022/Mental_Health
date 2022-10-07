@@ -38,5 +38,20 @@ Please read this [Contributing.md](https://github.com/CSC510-G35-Fall2022/Mental
 <br/>
 View our [project roadmap](https://github.com/orgs/CSC510-G35-Fall2022/projects/1) for features to work on.
 
+## Contributors
+
+This project has the following contributors:
+
+|    | Contributor            | GitHub ID       |
+| -- | ---------------------- | ----------------|
+|  1 | Cheerla, Sanjana       | Stoir           |
+|  2 | Ganesh, Saail Gurunath | SaailGanesh     |
+|  3 | Pardeshi, Sourabh      | SourabhPardeshi |
+|  4 | Patel, Maya            | maya-dc-patel   |
+|  5 | Xin, Vincent           | Culcheese       |
+
+
 ## Future Roadmap
 Click [here](https://github.com/orgs/CSC510-G35-Fall2022/projects/1/views/1) for our roadmap
+
+The future roadmap has the issues organized showing future possible extensions to this project.
