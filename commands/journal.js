@@ -1,6 +1,12 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { EmbedBuilder } = require("discord.js");
 
+  /**
+   * Slash command for journal
+   *
+   * @exports journal
+   */
+
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("journal")

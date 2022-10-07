@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: commands/journal.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,44 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: commands/journal.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const { SlashCommandBuilder } = require("@discordjs/builders");
+const { EmbedBuilder } = require("discord.js");
 
+  /**
+   * Slash command for journal
+   *
+   * @exports journal
+   */
 
-    <h3> </h3>
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName("journal")
+    .setDescription("Gives a journal prompt that can benefit mental health"),
 
+  async execute(interaction, options) {
+    num = Math.floor(Math.random() * options.length);
+  console.log('interaction\n', interaction);
+    const embed = new EmbedBuilder()
+      .setColor(0x0099ff)
+      .setTitle(options[num][0])
+      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
+      .setDescription("answer this journal prompt");
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+    const messageId = interaction.reply({ embeds: [embed] });
+  },
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

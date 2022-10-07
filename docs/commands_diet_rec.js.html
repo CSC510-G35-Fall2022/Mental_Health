@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: commands/diet_rec.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,55 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: commands/diet_rec.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const { SlashCommandBuilder } = require("@discordjs/builders");
+const { EmbedBuilder } = require("discord.js");
 
+  /**
+   * Slash command for diet recommendations
+   *
+   * @module diet_recommendation
+   */
 
-    <h3> </h3>
+module.exports = {
 
+  /**
+   * Slash command for diet recommendations
+   *
+   * @property {object} data - A slash command object
+   * @property {string} data.diet_recommendation - Name of the slash command
+   * @property {string} data.description - Description of the slash command
+   */
+  data: new SlashCommandBuilder()
+    .setName("diet_recommendation")
+    .setDescription("gives a diet tip"),
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+  /**
+   * Executes the slash command
+   * 
+   * @param {object} interaction - current interaction
+   * @param {Array&lt;string>} options - list of options
+   */
+  async execute(interaction, options) {
+    num = Math.floor(Math.random() * options.length);
+    const embed = new EmbedBuilder()
+      .setColor(0x2596be)
+      .setTitle(options[num][0])
+      .setDescription(options[num][1] + "\nRead more at: " + options[num][2]);
+    const messageId = interaction.reply({ embeds: [embed] });
+  },
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

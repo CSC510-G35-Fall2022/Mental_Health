@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: commands/help.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,60 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: commands/help.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const fs = require("fs");
+const { SlashCommandBuilder } = require("@discordjs/builders");
+const { EmbedBuilder } = require("discord.js");
 
+  /**
+   * Slash command for help command
+   *
+   * @exports commands/help
+   */
 
-    <h3> </h3>
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName("help")
+    .setDescription("Provides Names and Description of commands"),
+  async execute(interaction) {
+    let str;
+    str = ``;
+    const commandFiles = fs
+      .readdirSync("./commands")
+      .filter((file) => file.endsWith(".js"));
+    var fields = [];
 
+    for (const file of commandFiles) {
+      const command = require(`./${file}`);
+      fields.push({
+        name: `/${command.data.name}\n`,
+        value: `${command.data.description}`,
+      });
+    }
+    console.log(fields);
+    const embed = new EmbedBuilder()
+      .setColor(0x746abd)
+      .setTitle(
+        "List of slash commands and what each one does. Just type exactly what you see including the / \nFor Example: /help"
+      )
+      .addFields(fields);
 
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+    return interaction.reply({
+      embeds: [embed],
+    });
+  },
+};
+</code></pre>
+        </article>
+    </section>
 
 
 

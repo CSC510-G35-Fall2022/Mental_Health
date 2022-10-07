@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: commands/support_animal.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,41 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: commands/support_animal.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>const { SlashCommandBuilder } = require("@discordjs/builders");
+const { EmbedBuilder } = require("discord.js");
 
+  /**
+   * Slash command for support animal pictures
+   *
+   * @exports commands/support_animal
+   */
 
-    <h3> </h3>
+module.exports = {
+  data: new SlashCommandBuilder()
+    .setName("support_animal")
+    .setDescription("see an image of an adorable support animal"),
+  async execute(interaction, options) {
+    num = Math.floor(Math.random() * options.length);
 
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+    const embed = new EmbedBuilder()
+      .setColor("#FFFFFF")
+      .setTitle("You got this!")
+      .setImage(options[num][0])
+    const messageId = interaction.reply({ embeds: [embed] });
+  },
+};
+</code></pre>
+        </article>
+    </section>
 
 
 
