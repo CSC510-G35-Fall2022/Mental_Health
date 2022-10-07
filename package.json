@@ -20,6 +20,7 @@
   },
   "scripts": {
     "test": "standard && node my-tests.js",
-    "test_commands": "jest --coverage"
+    "test_commands": "jest --coverage",
+    "doc": "jsdoc -r README.md ./commands ./code/main.js -u ./tutorials -d ./docs"
   }
 }
