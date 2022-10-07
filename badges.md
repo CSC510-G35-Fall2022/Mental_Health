@@ -36,8 +36,8 @@
 
 [watchers]: https://img.shields.io/github/watchers/CSC510-G35-Fall2022/Mental_Health?style=social
 
-[coverage]: https://img.shields.io/badge/coverage-73%25-orange
-[coverage-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/coverage/index.html
+[coverage]: [https://img.shields.io/badge/coverage-40%25-orange]
+[coverage-url]: [https://github.com/CSC510-G35-Fall2022/Mental_Health/tree/main/coverage]
 
 [size]: https://img.shields.io/github/repo-size/CSC510-G35-Fall2022/Mental_Health
 
