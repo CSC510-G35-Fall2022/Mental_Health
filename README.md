@@ -17,7 +17,7 @@
 <br/>
 
 ### Purpose
-To incorporate aspects of mental well-being into discord usage. Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Below is a list of working functionalities as well as install and contributing instructions. **Spread kindness, more meaningful days, and provide emotional support over Discord by contributing!**
+To incorporate aspects of mental well-being into discord usage. Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Below is a list of working functionalities as well as install and contributing instructions. **Spread kindness, more meaningful days, and emotional support over Discord by contributing!**
 
 The following functionalities (commands) describe **how** we are meeting our purpose of this project. They are up and running.
 
