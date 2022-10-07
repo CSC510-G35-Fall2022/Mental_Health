@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/CSC510-G35-Fall2022/Mental_Health/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png" width=1200>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png?raw=true" width=1200>
  
 <br/>
 
@@ -9,33 +9,33 @@ The following functionalities (commands) describe **how** we are meeting our pur
 
 **Journal Command**: provides random journal-ing prompts for users to answer.
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.39.10%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.39.10%20PM.png?raw=true" width=500>
 <br/>
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.53.57%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.53.57%20PM.png?raw=true" width=500>
 
 **Support Animals Command**: provides random images of cute animals
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.25%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.25%20PM.png?raw=true" width=500>
 <br/>
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.16%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.16%20PM.png?raw=true" width=500>
 
 **Puzzle Command**: provides a puzzle game to challenge your mind!
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.40%20AM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.40%20AM.png?raw=true" width=500>
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.44%20AM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.44%20AM.png?raw=true" width=500>
 
 **Diet Reccomendation Command**: provides random diet tips
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.46.13%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.46.13%20PM.png?raw=true" width=500>
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.46.39%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.46.39%20PM.png?raw=true" width=500>
 
 **Help Command**: provides a list and description of existing commands
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.47.32%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.47.32%20PM.png?raw=true" width=500>
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.48.21%20PM.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.48.21%20PM.png?raw=true" width=500>
 
 ## Install instructions
 Please refer to [Install.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/INSTALL.md) for more in-depth instructions
