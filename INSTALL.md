@@ -39,15 +39,18 @@ CLIENT_ID='<paste the Bot's ID here>'
 ```
 
 ## Install Instructions in project location
-1. To install dependencies run
+1. Install Discord.js
 ```
-npm install
+npm install discord.js
 ```
 
-2. Run the main.js file in the code directory to activate bot
+2. Instal Dotenv locally
 ```
-node main.js
+npm install dotenv --save
 ```
+
+3. Run the main.js file
+```node main.js```
 
 ### Run Style Check
 
