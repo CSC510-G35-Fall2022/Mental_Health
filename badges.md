@@ -5,13 +5,11 @@
 [![last commit][last-commit]][last-commit-url]
 [![license][license]][license-url]
 [![coverage][coverage]][coverage-url]
-[![DOI](https://zenodo.org/badge/531546264.svg)](https://zenodo.org/badge/latestdoi/531546264)
+[![DOI](https://zenodo.org/badge/534256335.svg)](https://zenodo.org/badge/latestdoi/534256335)
 ![size][size]
 [![issues][issues]][issues-url]
 [![issues-closed][issues-closed]][issues-closed-url]
-![build][build]
-
-
+[![build][build]][build-url]
 ![forks][forks]
 ![stars][stars]
 ![watchers][watchers]
@@ -49,6 +47,7 @@
 [issues-closed]: https://img.shields.io/github/issues-closed/CSC510-G35-Fall2022/Mental_Health?color=pink&label=Issues&logo=Issues
 [issues-closed-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1
 
-[build]: https://img.shields.io/github/workflow/status/CSC510-G35-Fall2022/Mental_Health/actions
+[build]: https://img.shields.io/github/workflow/status/CSC510-G35-FALL2022/Mental_Health/Node1.js%20CI
+[build-url]: [https://github.com/orgs/CSC510-G35-Fall2022/projects/1](https://github.com/CSC510-G35-Fall2022/Mental_Health/actions)
 
 
