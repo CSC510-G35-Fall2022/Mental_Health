@@ -111,3 +111,6 @@ npm install --save-dev --save-exact prettier
 ```
 
 2.
+```
+npm run prettier
+```
