@@ -131,6 +131,6 @@ Click on the badge below to view the Zenodo DOI page for this project.
 [issues-closed]: https://img.shields.io/github/issues-closed/CSC510-G35-Fall2022/Mental_Health?color=pink&label=Issues&logo=Issues
 [issues-closed-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1
 
-[build]:
-[build-url]: [https://github.com/orgs/CSC510-G35-Fall2022/projects/1](https://github.com/CSC510-G35-Fall2022/Mental_Health/actions)
+[build]: https://img.shields.io/github/workflow/status/CSC510-G35-FALL2022/Mental_Health/Node1.js%20CI
+[build-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1](https://github.com/CSC510-G35-Fall2022/Mental_Health/actions
 
