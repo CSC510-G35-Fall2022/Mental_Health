@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+    Maya Patel
+    Sanjana Cheerla
+    Vincent Xin
+    Saail Ganesh
+    Sourabh Pardeshi
+title: "Mehe"
+version: 2.0.4
+doi: 10.5281/zenodo.7155102
+date-released: 2021-10-06
