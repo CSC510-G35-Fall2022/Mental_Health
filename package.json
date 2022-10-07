@@ -14,6 +14,7 @@
     "babel-jest": "^29.1.2",
     "jest": "^29.1.2",
     "jsdoc": "^3.6.11",
+    "prettier": "2.7.1",
     "standard": "^17.0.0",
     "ts-jest": "^29.0.3"
   },
@@ -21,6 +22,8 @@
     "test": "standard && node my-tests.js",
     "test_commands": "jest --coverage",
     "doc": "jsdoc -r README.md ./commands ./code/main.js -u ./tutorials -d ./docs",
-    "syntax": "syntax-checker code/ commands/ test/"
+    "syntax": "syntax-checker code/ commands/ test/",
+    "prettier": "prettier --write .",
+    "audit": "npm audit fix"
   }
 }

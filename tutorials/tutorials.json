@@ -1,11 +1,11 @@
 {
-    "slash-commands": {
-        "title": "Slash Commands"
-    },
-    "contribution": {
-        "title": "How to Contribute"
-    },
-    "documentation": {
-        "title": "Project Documentation"
-    }
+  "slash-commands": {
+    "title": "Slash Commands"
+  },
+  "contribution": {
+    "title": "How to Contribute"
+  },
+  "documentation": {
+    "title": "Project Documentation"
+  }
 }

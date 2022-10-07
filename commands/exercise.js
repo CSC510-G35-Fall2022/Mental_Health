@@ -6,7 +6,6 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
  * @exports exercise
  */
 module.exports = {
-
   /**
    * Slash command for exercise recommendations
    *
@@ -20,7 +19,7 @@ module.exports = {
     .setDescription("Gets one ergonomic exercise to relax"),
   /**
    * Executes the exercise command
-   * 
+   *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction

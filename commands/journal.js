@@ -18,7 +18,7 @@ module.exports = {
     .setDescription("Gives a journal prompt that can benefit mental health"),
   /**
    * Executes the journal command
-   * 
+   *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
@@ -26,7 +26,7 @@ module.exports = {
    */
   async execute(interaction, options) {
     num = Math.floor(Math.random() * options.length);
-    console.log('interaction\n', interaction);
+    console.log("interaction\n", interaction);
     /**
      * Embedded object
      *

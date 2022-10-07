@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 authors:
-- family-names: "Patel"
-  given-names: "Maya"
-- family-names: "Cheerla"
-  given-names: "Sanjana"
-- family-names: "Xin"
-  given-names: "Vincent"
-- family-names: "Ganesh"
-  given-names: "Saail"
-- family-names: "Pardeshi"
-  given-names: "Sourabh"
+  - family-names: "Patel"
+    given-names: "Maya"
+  - family-names: "Cheerla"
+    given-names: "Sanjana"
+  - family-names: "Xin"
+    given-names: "Vincent"
+  - family-names: "Ganesh"
+    given-names: "Saail"
+  - family-names: "Pardeshi"
+    given-names: "Sourabh"
 title: "MeHe Discord Bot"
 version: 2.0.4
 doi: 10.5281/zenodo.7155102

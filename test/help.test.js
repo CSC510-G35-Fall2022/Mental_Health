@@ -21,6 +21,8 @@ it("test help command name", async () => {
 });
 
 it("test help command description", async () => {
-  expect(help.data.description).toEqual("Provides Names and Description of commands");
+  expect(help.data.description).toEqual(
+    "Provides Names and Description of commands"
+  );
   // expect(journal.execute()).toHaveBeenCalledTimes(0);
 });

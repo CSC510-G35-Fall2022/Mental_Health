@@ -1,7 +1,13 @@
 //do not delete needed for env
 require("dotenv").config();
 
-const { Client, Collection, GatewayIntentBits, REST, Routes } = require("discord.js");
+const {
+  Client,
+  Collection,
+  GatewayIntentBits,
+  REST,
+  Routes,
+} = require("discord.js");
 /**
  * Current client
  * @type {Client}
@@ -161,8 +167,7 @@ client.on("interactionCreate", async (interaction) => {
           ephemeral: true,
         });
       }
-    }
-    else if (interaction.commandName === "exercise") {
+    } else if (interaction.commandName === "exercise") {
       try {
         await command.execute(interaction, exercise);
       } catch (error) {
@@ -172,8 +177,7 @@ client.on("interactionCreate", async (interaction) => {
           ephemeral: true,
         });
       }
-    }
-    else if (interaction.commandName === "resources") {
+    } else if (interaction.commandName === "resources") {
       try {
         await command.execute(interaction);
       } catch (error) {
@@ -183,9 +187,7 @@ client.on("interactionCreate", async (interaction) => {
           ephemeral: true,
         });
       }
-    }
-    else
-      return;
+    } else return;
   } else if (interaction.isMessageComponent()) {
     const command = client.commands.get(
       interaction.message.interaction.commandName
@@ -203,9 +205,7 @@ client.on("interactionCreate", async (interaction) => {
         });
       }
     }
-  }
-  else
-    return;
+  } else return;
 });
 
 // referenced: https://sebhastian.com/read-csv-javascript/
