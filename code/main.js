@@ -1,11 +1,7 @@
 //do not delete needed for env
 require("dotenv").config();
 
-const {
-  Client,
-  Collection,
-  GatewayIntentBits,
-} = require("discord.js");
+const { Client, Collection, GatewayIntentBits } = require("discord.js");
 /**
  * Current client
  * @type {Client}
@@ -33,6 +29,7 @@ supportAnimals = [];
  * @type {Array<string>}
  */
 dietRecs = [];
+exercise = [];
 
 //do not edit until you see an edit from here message again
 //register slash commands
@@ -92,6 +89,7 @@ client.on("ready", () => {
   parseCSV("./data/journalPrompts.csv", journalPrompts, "|||");
   parseCSV("./data/supportanimals.csv", supportAnimals, ",");
   parseCSV("./data/diet_recs.csv", dietRecs, "|");
+  parseCSV("./data/exercise.csv", exercise, "|");
 });
 
 client.on("message", (msg) => {
@@ -102,13 +100,12 @@ client.on("message", (msg) => {
 });
 
 client.on("interactionCreate", async (interaction) => {
-
-  if (interaction.isCommand()){
+  if (interaction.isCommand()) {
     const command = client.commands.get(interaction.commandName);
 
-    console.log(command)
+    console.log(command);
 
-    if ((interaction.commandName === "support_animal")) {
+    if (interaction.commandName === "support_animal") {
       try {
         await command.execute(interaction, supportAnimals);
       } catch (error) {
@@ -118,8 +115,7 @@ client.on("interactionCreate", async (interaction) => {
           ephemeral: true,
         });
       }
-    }
-    else if ((interaction.commandName === "diet_recommendation")) {
+    } else if (interaction.commandName === "diet_recommendation") {
       try {
         await command.execute(interaction, dietRecs);
       } catch (error) {
@@ -129,8 +125,7 @@ client.on("interactionCreate", async (interaction) => {
           ephemeral: true,
         });
       }
-    }
-    else if ((interaction.commandName === "journal")) {
+    } else if (interaction.commandName === "journal") {
       try {
         await command.execute(interaction, journalPrompts);
       } catch (error) {
@@ -140,8 +135,27 @@ client.on("interactionCreate", async (interaction) => {
           ephemeral: true,
         });
       }
-    }
-    else if ((interaction.commandName === "ping")) {
+    } else if (interaction.commandName === "ping") {
+      try {
+        await command.execute(interaction);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    } else if (interaction.commandName === "help") {
+      try {
+        await command.execute(interaction);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    } else if (interaction.commandName == "puzzle") {
       try {
         await command.execute(interaction);
       } catch (error) {
@@ -152,9 +166,10 @@ client.on("interactionCreate", async (interaction) => {
         });
       }
     }
-    else if ((interaction.commandName === "help")) {
+
+    if (interaction.commandName === "exercise") {
       try {
-        await command.execute(interaction);
+        await command.execute(interaction, exercise);
       } catch (error) {
         if (error) console.error(error);
         await interaction.reply({
@@ -163,23 +178,13 @@ client.on("interactionCreate", async (interaction) => {
         });
       }
     }
-    else if(interaction.commandName == "puzzle"){
-      try {
-        await command.execute(interaction);
-      } catch (error) {
-        if (error) console.error(error);
-        await interaction.reply({
-          content: "There was an error while executing this command!",
-          ephemeral: true,
-        });
-      }
-    }
-  }
-  else if (interaction.isMessageComponent()) {
-    const command = client.commands.get(interaction.message.interaction.commandName);
+  } else if (interaction.isMessageComponent()) {
+    const command = client.commands.get(
+      interaction.message.interaction.commandName
+    );
     //console.log(command);
     //console.log(interaction);
-    if(interaction.message.interaction.commandName == "puzzle"){
+    if (interaction.message.interaction.commandName == "puzzle") {
       try {
         await command.updateBoard(interaction);
       } catch (error) {
@@ -201,7 +206,6 @@ function parseCSV(csvfile, list, delim) {
     .on("data", function (row) {
       prompt = row.toString();
       list.push(row);
-
     })
     .on("error", function (error) {
       console.log("error", error.message);
