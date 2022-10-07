@@ -1,12 +1,11 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { EmbedBuilder } = require("discord.js");
 
-  /**
-   * Slash command for support animal pictures
-   *
-   * @exports support_animal
-   */
-
+/**
+ * Slash command for support animal pictures
+ *
+ * @exports support_animal
+ */
 module.exports = {
   /**
    * Slash command for support animal command

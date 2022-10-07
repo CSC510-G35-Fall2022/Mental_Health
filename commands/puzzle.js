@@ -1,15 +1,13 @@
 const { SlashCommandBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder  } = require('discord.js');
 
+let arr = [];
+
+let dict = {0: '🔴', 1: '🟢'}
 /**
  * Slash command for puzzle game
  *
  * @exports puzzle_game
  */
-
-let arr = [];
-
-let dict = {0: '🔴', 1: '🟢'}
-
 module.exports = {
   /**
    * Slash command for puzzle command

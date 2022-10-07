@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: commands/support_animal.js</title>
+    <title>JSDoc: Source: commands/exercise.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: commands/support_animal.js</h1>
+    <h1 class="page-title">Source: commands/exercise.js</h1>
 
     
 
@@ -30,30 +30,33 @@
 const { EmbedBuilder } = require("discord.js");
 
 /**
- * Slash command for support animal pictures
+ * Slash command for exercise recommendations
  *
- * @exports support_animal
+ * @exports exercise
  */
 module.exports = {
+
   /**
-   * Slash command for support animal command
+   * Slash command for exercise recommendations
    *
+   * @type {object}
    * @property {object} data - A slash command object
    * @property {string} data.name - Name of the slash command
    * @property {string} data.description - Description of the slash command
    */
   data: new SlashCommandBuilder()
-    .setName("support_animal")
-    .setDescription("see an image of an adorable support animal"),
+    .setName("exercise")
+    .setDescription("Gets one ergonomic exercise to relax"),
   /**
-   * Executes the support_animal command
+   * Executes the exercise command
    * 
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
-   * @param {Array&lt;string>} options - List of animal picture links
+   * @param {Array&lt;string>} options - List of exercise tips
    */
   async execute(interaction, options) {
+    console.log(options)
     num = Math.floor(Math.random() * options.length);
 
     /**
@@ -61,18 +64,19 @@ module.exports = {
      *
      * @member {object} embed
      * @property {object} embed - Embed object
-     * @property {object} embed.color - Color of the embed
+     * @property {color} embed.color - Color of the embed
      * @property {string} embed.title - Title of the embed
-     * @property {color} embed.image - Image to display in the embed
+     * @property {string} embed.description - Description of the embed
+     * @property {string} embed.images - Description of the image
      */
     const embed = new EmbedBuilder()
       .setColor("#FFFFFF")
-      .setTitle("You got this!")
-      .setImage(options[num][0])
+      .setTitle(options[num][0])
+      .setDescription(options[num][1])
+      .setImage(options[num][2])
     const messageId = interaction.reply({ embeds: [embed] });
   },
-};
-</code></pre>
+};</code></pre>
         </article>
     </section>
 

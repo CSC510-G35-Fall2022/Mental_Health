@@ -21,15 +21,6 @@ module.exports = {
     .setDescription("gives a diet tip"),
 
   /**
-   * Embedded object
-   *
-   * @property {object} embed - Embed object
-   * @property {color} embed.color - Color of the embed
-   * @property {string} embed.title- Title of the embed
-   * @property {string} data.description - Description of the embed
-   */
-
-  /**
    * Executes the diet slash command
    * 
    * @async

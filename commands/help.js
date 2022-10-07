@@ -2,12 +2,11 @@ const fs = require("fs");
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { EmbedBuilder } = require("discord.js");
 
-  /**
-   * Slash command for help command
-   *
-   * @exports help
-   */
-
+/**
+ * Slash command for help command
+ *
+ * @exports help
+ */
 module.exports = {
   /**
    * Slash command for help command
