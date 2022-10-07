@@ -1,5 +1,8 @@
 {
     "slash-commands": {
         "title": "Slash Commands"
+    },
+    "contribution": {
+        "title": "How to Contribute"
     }
 }
