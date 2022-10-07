@@ -3,7 +3,8 @@
     import JournalCommand, { getData as getJournalData } from "./journal.js";
     import PingCommand, { getData as getPingData } from "./ping.js";
     import HelpCommand, { getData as getHelpData } from "./help.js";
-    export { JournalCommand, PingCommand, HelpCommand };
+    import ResourceCommand,  { getData as getResourceData } from "./resources.js";
+    export { JournalCommand, PingCommand, HelpCommand, ResourceCommand };
 
-    export default [getJournalData, getPingData, getHelpData];
+    export default [getJournalData, getPingData, getHelpData, getResourceData];
 </script>
