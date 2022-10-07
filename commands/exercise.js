@@ -28,7 +28,7 @@ module.exports = {
    * @param {Array<string>} options - List of exercise tips
    */
   async execute(interaction, options) {
-    console.log(options)
+    console.log(options);
     num = Math.floor(Math.random() * options.length);
 
     /**
@@ -45,7 +45,7 @@ module.exports = {
       .setColor("#FFFFFF")
       .setTitle(options[num][0])
       .setDescription(options[num][1])
-      .setImage(options[num][2])
-    const messageId = interaction.reply({ embeds: [embed] });
+      .setImage(options[num][2]);
+    interaction.reply({ embeds: [embed] });
   },
 };

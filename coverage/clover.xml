@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1665107558021" clover="3.2.0">
-  <project timestamp="1665107558021" name="All files">
+<coverage generated="1665115675576" clover="3.2.0">
+  <project timestamp="1665115675576" name="All files">
     <metrics statements="80" coveredstatements="17" conditionals="14" coveredconditionals="0" methods="7" coveredmethods="0" elements="101" coveredelements="17" complexity="0" loc="80" ncloc="80" packages="1" files="5" classes="5"/>
     <file name="help.js" path="/Users/mayapatel/Documents/Academics/Fall 2022/CSC510/Project1/Mental_Health/commands/help.js">
       <metrics statements="14" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
