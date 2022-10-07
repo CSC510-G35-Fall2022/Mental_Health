@@ -87,3 +87,10 @@ sudo npm install -g uglify-js
 ```
 npm run syntax
 ```
+
+### Running code formatter
+1. Install prettier
+```
+npm install --save-dev --save-exact prettier
+```
+2. 
