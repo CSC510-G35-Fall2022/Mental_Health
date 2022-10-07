@@ -12,7 +12,7 @@ it("test journal command", async () => {
   // expect(journal.execute()).toHaveBeenCalledTimes(0);
   const stringCommand = "/journal";
   // const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-  await journal.execute(Interaction, ["list"]);
+  // await journal.execute(Interaction, ["list"]);
 });
 
 it("test journal command name", async () => {
