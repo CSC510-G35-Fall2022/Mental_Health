@@ -45,6 +45,10 @@ The following functionalities (commands) describe **how** we are meeting our pur
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.46.39%20PM.png?raw=true" width=500>
 
+**Exercise Command**: provides an exercise routine
+
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/exercise.PNG?raw=true" width=500>
+
 **Help Command**: provides a list and description of existing commands
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.47.32%20PM.png?raw=true" width=500>
@@ -56,6 +60,7 @@ Please refer to [Install.md](https://github.com/CSC510-G35-Fall2022/Mental_Healt
 
 ### Want to Contribute to the project?
 Take a look at our [documentation](https://csc510-g35-fall2022.github.io/Mental_Health/index.html)
+<br/>
 Please read this [Contributing.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/contributing.MD).
 <br/>
 View our [project roadmap](https://github.com/orgs/CSC510-G35-Fall2022/projects/1) for features to work on.
