@@ -1,13 +1,12 @@
-const animal = require("../commands/support_animal.js");
+const exercise = require("../commands/exercise.js");
 const {
   Discord,
   ChatInputCommandInteraction,
   Interaction,
 } = require("discord.js");
 
-it("test support_animal command", async () => {
-  console.log(animal);
-  expect(animal).toBeTruthy();
+it("test exercise command", async () => {
+  expect(exercise).toBeTruthy();
 
   // expect(journal.execute()).toHaveBeenCalledTimes(0);
   // const stringCommand = "/help";
@@ -15,12 +14,12 @@ it("test support_animal command", async () => {
   // await journal.execute(Interaction, ["list"]);
 })
 
-it("test animal command name", async () => {
-  expect(animal.data.name).toEqual("support_animal");
+it("test exercise command name", async () => {
+  expect(exercise.data.name).toEqual("exercise");
   // expect(journal.execute()).toHaveBeenCalledTimes(0);
 })
 
-it("test animal command description", async () => {
-  expect(animal.data.description).toEqual("See an image of an adorable support animal");
+it("test exericse command description", async () => {
+  expect(exercise.data.description).toEqual("Gets one ergonomic exercise to relax");
   // expect(journal.execute()).toHaveBeenCalledTimes(0);
 })
