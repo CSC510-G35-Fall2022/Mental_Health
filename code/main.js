@@ -173,6 +173,17 @@ client.on("interactionCreate", async (interaction) => {
         });
       }
     }
+    else if (interaction.commandName === "resources") {
+      try {
+        await command.execute(interaction);
+      } catch (error) {
+        if (error) console.error(error);
+        await interaction.reply({
+          content: "There was an error while executing this command!",
+          ephemeral: true,
+        });
+      }
+    }
     else
       return;
   } else if (interaction.isMessageComponent()) {
