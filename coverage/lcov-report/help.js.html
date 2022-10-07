@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for journal.js</title>
+    <title>Code coverage report for help.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> journal.js</h1>
+        <h1><a href="index.html">All files</a> help.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>4/14</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>4/14</span>
             </div>
         
             
@@ -83,14 +83,35 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -99,28 +120,52 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { SlashCommandBuilder } = require("@discordjs/builders");
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const fs = require("fs");
+const { SlashCommandBuilder } = require("@discordjs/builders");
 const { EmbedBuilder } = require("discord.js");
-&nbsp;
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("journal")
-    .setDescription("Gives a journal prompt that can benefit mental health"),
+    .setName("help")
+    .setDescription("Provides Names and Description of commands"),
+<span class="fstat-no" title="function not covered" >  as</span>ync execute(interaction) {
+    let str;
+<span class="cstat-no" title="statement not covered" >    str = ``;</span>
+    const commandFiles = <span class="cstat-no" title="statement not covered" >fs</span>
+      .readdirSync("./commands")
+      .filter(<span class="fstat-no" title="function not covered" >(f</span>ile) =&gt; <span class="cstat-no" title="statement not covered" >file.endsWith(".js"))</span>;
+    var fields = <span class="cstat-no" title="statement not covered" >[];</span>
 &nbsp;
-<span class="fstat-no" title="function not covered" >  as</span>ync execute(interaction, options) {
-<span class="cstat-no" title="statement not covered" >    num = Math.floor(Math.random() * options.length);</span>
-<span class="cstat-no" title="statement not covered" >  console.log('interaction\n', interaction);</span>
+<span class="cstat-no" title="statement not covered" >    for (const file of commandFiles) {</span>
+      const command = <span class="cstat-no" title="statement not covered" >require(`./${file}`);</span>
+<span class="cstat-no" title="statement not covered" >      fields.push({</span>
+        name: `/${command.data.name}\n`,
+        value: `${command.data.description}`,
+      });
+    }
+<span class="cstat-no" title="statement not covered" >    console.log(fields);</span>
     const embed = <span class="cstat-no" title="statement not covered" >new EmbedBuilder()</span>
-      .setColor(0x0099ff)
-      .setTitle(options[num][0])
-      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
-      .setDescription("answer this journal prompt");
+      .setColor(0x746abd)
+      .setTitle(
+        "List of slash commands and what each one does. Just type exactly what you see including the / \nFor Example: /help"
+      )
+      .addFields(fields);
 &nbsp;
-    const messageId = <span class="cstat-no" title="statement not covered" >interaction.reply({ embeds: [embed] });</span>
+<span class="cstat-no" title="statement not covered" >    return interaction.reply({</span>
+      embeds: [embed],
+    });
   },
 };
 &nbsp;</pre></td></tr></table></pre>
