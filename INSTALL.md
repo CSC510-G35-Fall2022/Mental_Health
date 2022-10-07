@@ -45,7 +45,9 @@ npm install
 ```
 
 2. Run the main.js file in the code directory to activate bot
-```node main.js```
+```
+node main.js
+```
 
 ### Run Style Check
 
