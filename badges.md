@@ -9,9 +9,7 @@
 ![size][size]
 [![issues][issues]][issues-url]
 [![issues-closed][issues-closed]][issues-closed-url]
-![build][build]
-
-
+[![build][build]][build-url]
 ![forks][forks]
 ![stars][stars]
 ![watchers][watchers]
@@ -38,8 +36,8 @@
 
 [watchers]: https://img.shields.io/github/watchers/CSC510-G35-Fall2022/Mental_Health?style=social
 
-[coverage]: https://img.shields.io/badge/coverage-73%25-orange
-[coverage-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/coverage/index.html
+[coverage]: https://img.shields.io/badge/coverage-40%25-orange
+[coverage-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/tree/main/coverage
 
 [size]: https://img.shields.io/github/repo-size/CSC510-G35-Fall2022/Mental_Health
 
@@ -49,6 +47,7 @@
 [issues-closed]: https://img.shields.io/github/issues-closed/CSC510-G35-Fall2022/Mental_Health?color=pink&label=Issues&logo=Issues
 [issues-closed-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1
 
-[build]: https://img.shields.io/github/workflow/status/CSC510-G35-Fall2022/Mental_Health/actions/workflows/node1.js.yml
+[build]: https://img.shields.io/github/workflow/status/CSC510-G35-FALL2022/Mental_Health/Node1.js%20CI
+[build-url]: [https://github.com/orgs/CSC510-G35-Fall2022/projects/1](https://github.com/CSC510-G35-Fall2022/Mental_Health/actions)
 
 
