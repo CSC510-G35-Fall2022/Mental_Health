@@ -1,4 +1,4 @@
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png" width=600>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png" width=1200>
  
 <br/>
 
