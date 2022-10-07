@@ -21,6 +21,6 @@ it("test animal command name", async () => {
 })
 
 it("test animal command description", async () => {
-  expect(animal.data.description).toEqual("see an image of an adorable support animal");
+  expect(animal.data.description).toEqual("See an image of an adorable support animal");
   // expect(journal.execute()).toHaveBeenCalledTimes(0);
 })
