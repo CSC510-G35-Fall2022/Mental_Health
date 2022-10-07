@@ -38,7 +38,7 @@ TOKEN='<insert token here>'
 CLIENT_ID='<paste the Bot's ID here>'
 ```
 
-## Install Instructions
+## Install Instructions in project location
 1. Install Discord.js
 ```
 npm install discord.js
@@ -49,23 +49,28 @@ npm install discord.js
 npm install dotenv --save
 ```
 
-Run the main.js file
+3. Run the main.js file
+```node main.js```
 
+### Run Style Check
 
-
-For Style Checker (in local directory): 
+1. For Style Checker (in local directory): 
 ```
 npm install standard --save-dev
 ```
 
-Testing the commands:
+2. Run 
+```npx standard```
 
-Install jest: 
+### Testing the commands:
+
+1. Install jest: 
 
 ```
 npm install --save-dev jest
 ```
 
+2. Run
 ```
 npm run test_commands
 ```
