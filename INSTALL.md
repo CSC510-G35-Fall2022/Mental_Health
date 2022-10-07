@@ -75,3 +75,15 @@ npm install --save-dev jest
 npm run test_commands
 ```
 
+### Running Syntax Checker
+1. Install syntax checker
+```
+npm install syntax-checker -g
+npm install uglifyjs -g
+sudo npm install -g uglify-js
+```
+
+2. Run:
+```
+npm run syntax
+```
