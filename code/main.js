@@ -6,6 +6,10 @@ const {
   Collection,
   GatewayIntentBits,
 } = require("discord.js");
+/**
+ * Current client
+ * @type {Client}
+ */
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 const { EmbedBuilder } = require("discord.js");
 const { REST, Routes } = require("discord.js");
@@ -13,8 +17,21 @@ const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 const { parse } = require("csv-parse");
 const guilds = ["1011989055736660061"];
+
+/**
+ * List of Journal Prompts
+ * @type {Array<string>}
+ */
 journalPrompts = [];
+/**
+ * List of Support Animal links
+ * @type {Array<string>}
+ */
 supportAnimals = [];
+/**
+ * List of Diet Recommendations
+ * @type {Array<string>}
+ */
 dietRecs = [];
 
 //do not edit until you see an edit from here message again
@@ -39,6 +56,10 @@ for (const file of eventFiles) {
 }
 
 client.commands = new Collection();
+/**
+ * List of commands
+ * @type {Array}
+ */
 const commands = [];
 
 for (const file of commandFiles) {
