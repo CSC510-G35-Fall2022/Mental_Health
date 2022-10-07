@@ -114,3 +114,9 @@ npm install --save-dev --save-exact prettier
 ```
 npm run prettier
 ```
+
+### Other automated tools: audit
+1. Run:
+```
+npm run audit
+```
