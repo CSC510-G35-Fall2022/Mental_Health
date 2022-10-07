@@ -1,5 +1,4 @@
-const { SlashCommandBuilder } = require("@discordjs/builders");
-const { EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 /**
  * Slash command for diet recommendations
@@ -18,7 +17,7 @@ module.exports = {
    */
   data: new SlashCommandBuilder()
     .setName("diet_recommendation")
-    .setDescription("gives a diet tip"),
+    .setDescription("Gives a diet tip"),
 
   /**
    * Executes the diet slash command

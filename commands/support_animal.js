@@ -1,5 +1,4 @@
-const { SlashCommandBuilder } = require("@discordjs/builders");
-const { EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 /**
  * Slash command for support animal pictures
@@ -16,7 +15,7 @@ module.exports = {
    */
   data: new SlashCommandBuilder()
     .setName("support_animal")
-    .setDescription("see an image of an adorable support animal"),
+    .setDescription("See an image of an adorable support animal"),
   /**
    * Executes the support_animal command
    * 

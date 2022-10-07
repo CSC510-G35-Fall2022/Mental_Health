@@ -1,14 +1,12 @@
 //do not delete needed for env
 require("dotenv").config();
 
-const { Client, Collection, GatewayIntentBits } = require("discord.js");
+const { Client, Collection, GatewayIntentBits, REST, Routes } = require("discord.js");
 /**
  * Current client
  * @type {Client}
  */
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-const { EmbedBuilder } = require("discord.js");
-const { REST, Routes } = require("discord.js");
 const clientId = process.env.CLIENT_ID;
 const fs = require("fs");
 const { parse } = require("csv-parse");
@@ -102,9 +100,7 @@ client.on("message", (msg) => {
 client.on("interactionCreate", async (interaction) => {
   if (interaction.isCommand()) {
     const command = client.commands.get(interaction.commandName);
-
-    console.log(command);
-
+    //console.log(command);
     if (interaction.commandName === "support_animal") {
       try {
         await command.execute(interaction, supportAnimals);
@@ -166,8 +162,7 @@ client.on("interactionCreate", async (interaction) => {
         });
       }
     }
-
-    if (interaction.commandName === "exercise") {
+    else if (interaction.commandName === "exercise") {
       try {
         await command.execute(interaction, exercise);
       } catch (error) {
@@ -178,6 +173,8 @@ client.on("interactionCreate", async (interaction) => {
         });
       }
     }
+    else
+      return;
   } else if (interaction.isMessageComponent()) {
     const command = client.commands.get(
       interaction.message.interaction.commandName
@@ -196,6 +193,8 @@ client.on("interactionCreate", async (interaction) => {
       }
     }
   }
+  else
+    return;
 });
 
 // referenced: https://sebhastian.com/read-csv-javascript/

@@ -1,6 +1,5 @@
 const fs = require("fs");
-const { SlashCommandBuilder } = require("@discordjs/builders");
-const { EmbedBuilder } = require("discord.js");
+const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 /**
  * Slash command for help command
@@ -40,7 +39,6 @@ module.exports = {
         value: `${command.data.description}`,
       });
     }
-    console.log(fields);
     /**
      * Embedded object
      *
