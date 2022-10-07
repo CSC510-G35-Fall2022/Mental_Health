@@ -55,6 +55,7 @@ The following functionalities (commands) describe **how** we are meeting our pur
 Please refer to [Install.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/INSTALL.md) for more in-depth instructions
 
 ### Want to Contribute to the project?
+Take a look at our [documentation](https://csc510-g35-fall2022.github.io/Mental_Health/index.html)
 Please read this [Contributing.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/contributing.MD).
 <br/>
 View our [project roadmap](https://github.com/orgs/CSC510-G35-Fall2022/projects/1) for features to work on.
