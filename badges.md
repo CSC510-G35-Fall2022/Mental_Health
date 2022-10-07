@@ -49,6 +49,6 @@
 [issues-closed]: https://img.shields.io/github/issues-closed/CSC510-G35-Fall2022/Mental_Health?color=pink&label=Issues&logo=Issues
 [issues-closed-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1
 
-[build]: https://img.shields.io/github/workflow/status/CSC510-G35-Fall2022/Mental_Health/actions
+[build]: https://img.shields.io/github/workflow/status/CSC510-G35-Fall2022/Mental_Health/actions/workflows/node1.js.yml
 
 
