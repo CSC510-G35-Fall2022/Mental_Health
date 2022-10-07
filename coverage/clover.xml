@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1665115675576" clover="3.2.0">
-  <project timestamp="1665115675576" name="All files">
-    <metrics statements="80" coveredstatements="17" conditionals="14" coveredconditionals="0" methods="7" coveredmethods="0" elements="101" coveredelements="17" complexity="0" loc="80" ncloc="80" packages="1" files="5" classes="5"/>
-    <file name="help.js" path="/Users/mayapatel/Documents/Academics/Fall 2022/CSC510/Project1/Mental_Health/commands/help.js">
+<coverage generated="1665117675749" clover="3.2.0">
+  <project timestamp="1665117675749" name="All files">
+    <metrics statements="80" coveredstatements="16" conditionals="14" coveredconditionals="0" methods="7" coveredmethods="0" elements="101" coveredelements="16" complexity="0" loc="80" ncloc="80" packages="1" files="5" classes="5"/>
+    <file name="help.js" path="/Users/sanjanacheerla/Mental_Health/commands/help.js">
       <metrics statements="14" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="10" count="0" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
-      <line num="16" count="0" type="stmt"/>
-      <line num="17" count="0" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="24" count="0" type="stmt"/>
+      <line num="10" count="1" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
       <line num="31" count="0" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="38" count="0" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
+      <line num="53" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
     </file>
-    <file name="journal.js" path="/Users/mayapatel/Documents/Academics/Fall 2022/CSC510/Project1/Mental_Health/commands/journal.js">
+    <file name="journal.js" path="/Users/sanjanacheerla/Mental_Health/commands/journal.js">
       <metrics statements="7" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="10" count="0" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="12" count="0" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
+      <line num="41" count="0" type="stmt"/>
+      <line num="46" count="0" type="stmt"/>
     </file>
-    <file name="ping.js" path="/Users/mayapatel/Documents/Academics/Fall 2022/CSC510/Project1/Mental_Health/commands/ping.js">
+    <file name="ping.js" path="/Users/sanjanacheerla/Mental_Health/commands/ping.js">
       <metrics statements="3" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
     </file>
-    <file name="puzzle.js" path="/Users/mayapatel/Documents/Academics/Fall 2022/CSC510/Project1/Mental_Health/commands/puzzle.js">
-      <metrics statements="50" coveredstatements="5" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
+    <file name="puzzle.js" path="/Users/sanjanacheerla/Mental_Health/commands/puzzle.js">
+      <metrics statements="50" coveredstatements="4" conditionals="14" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="3" count="1" type="stmt"/>
       <line num="5" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-      <line num="18" count="0" type="stmt"/>
-      <line num="19" count="0" type="stmt"/>
-      <line num="20" count="0" type="stmt"/>
-      <line num="21" count="0" type="stmt"/>
-      <line num="22" count="0" type="stmt"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="24" count="0" type="stmt"/>
-      <line num="25" count="0" type="stmt"/>
-      <line num="26" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="27" count="0" type="stmt"/>
-      <line num="28" count="0" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="30" count="0" type="stmt"/>
       <line num="31" count="0" type="stmt"/>
       <line num="32" count="0" type="stmt"/>
-      <line num="47" count="0" type="stmt"/>
+      <line num="33" count="0" type="stmt"/>
+      <line num="34" count="0" type="stmt"/>
+      <line num="35" count="0" type="stmt"/>
+      <line num="36" count="0" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+      <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="39" count="0" type="stmt"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="43" count="0" type="stmt"/>
       <line num="51" count="0" type="stmt"/>
-      <line num="56" count="0" type="stmt"/>
-      <line num="57" count="0" type="stmt"/>
-      <line num="58" count="0" type="stmt"/>
-      <line num="59" count="0" type="stmt"/>
-      <line num="61" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="62" count="0" type="stmt"/>
-      <line num="63" count="0" type="stmt"/>
-      <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="66" count="0" type="stmt"/>
-      <line num="67" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="68" count="0" type="stmt"/>
-      <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="70" count="0" type="stmt"/>
-      <line num="71" count="0" type="stmt"/>
-      <line num="72" count="0" type="stmt"/>
-      <line num="74" count="0" type="stmt"/>
-      <line num="89" count="0" type="stmt"/>
-      <line num="92" count="0" type="stmt"/>
-      <line num="93" count="0" type="stmt"/>
-      <line num="94" count="0" type="stmt"/>
-      <line num="95" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="78" count="0" type="stmt"/>
+      <line num="83" count="0" type="stmt"/>
+      <line num="95" count="0" type="stmt"/>
       <line num="96" count="0" type="stmt"/>
-      <line num="99" count="0" type="cond" truecount="0" falsecount="2"/>
-      <line num="100" count="0" type="stmt"/>
+      <line num="97" count="0" type="stmt"/>
+      <line num="98" count="0" type="stmt"/>
+      <line num="100" count="0" type="cond" truecount="0" falsecount="2"/>
       <line num="101" count="0" type="stmt"/>
-      <line num="103" count="0" type="stmt"/>
-      <line num="121" count="0" type="stmt"/>
-      <line num="123" count="0" type="stmt"/>
-      <line num="127" count="0" type="stmt"/>
-      <line num="130" count="0" type="stmt"/>
+      <line num="102" count="0" type="stmt"/>
+      <line num="104" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="105" count="0" type="stmt"/>
+      <line num="106" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="107" count="0" type="stmt"/>
+      <line num="108" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="109" count="0" type="stmt"/>
+      <line num="110" count="0" type="stmt"/>
+      <line num="111" count="0" type="stmt"/>
+      <line num="113" count="0" type="stmt"/>
+      <line num="128" count="0" type="stmt"/>
+      <line num="131" count="0" type="stmt"/>
+      <line num="132" count="0" type="stmt"/>
+      <line num="133" count="0" type="stmt"/>
+      <line num="134" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="135" count="0" type="stmt"/>
+      <line num="138" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="139" count="0" type="stmt"/>
+      <line num="140" count="0" type="stmt"/>
+      <line num="142" count="0" type="stmt"/>
+      <line num="160" count="0" type="stmt"/>
+      <line num="162" count="0" type="stmt"/>
+      <line num="166" count="0" type="stmt"/>
+      <line num="169" count="0" type="stmt"/>
     </file>
-    <file name="support_animal.js" path="/Users/mayapatel/Documents/Academics/Fall 2022/CSC510/Project1/Mental_Health/commands/support_animal.js">
+    <file name="support_animal.js" path="/Users/sanjanacheerla/Mental_Health/commands/support_animal.js">
       <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="9" count="0" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="15" count="0" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="29" count="0" type="stmt"/>
+      <line num="40" count="0" type="stmt"/>
+      <line num="44" count="0" type="stmt"/>
     </file>
   </project>
 </coverage>
