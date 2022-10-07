@@ -2,9 +2,13 @@
 
 This folder consists of all the commands. Each command has its own file.
 
+
+
 For example:
 
 journal.js: Consists of code necessary to run /journal command.
+
+
 
 To add a new command (**/COMMANDNAME**):
 
