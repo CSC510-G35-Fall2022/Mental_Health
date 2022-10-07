@@ -32,5 +32,5 @@ jobs:
     - run: npm install --save-dev jest
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+#     - run: npm test
     - run: npm run test_commands
