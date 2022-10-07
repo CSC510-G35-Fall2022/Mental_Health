@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/CSC510-G35-Fall2022/Mental_Health/main/images/Welcome%20to%20MeHe%20-A%20Discord%20Bot%20for%20Mental%20Health.png" width=1200>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png" width=1200>
  
 <br/>
 
