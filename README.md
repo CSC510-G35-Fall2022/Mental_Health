@@ -1,4 +1,4 @@
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Pink%20Abstract%20Handwritten%20Logo%20(3).png" width=150><img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Untitled%20design.png" width=600>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png" width=600>
  
 <br/>
 
