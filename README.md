@@ -53,7 +53,7 @@ The following functionalities (commands) describe **how** we are meeting our pur
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.47.32%20PM.png?raw=true" width=500>
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.48.21%20PM.png?raw=true" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/se2.png?raw=true" width=500>
 
 **Resources Command**: provides Resources, Contacts for Mental Health
 
