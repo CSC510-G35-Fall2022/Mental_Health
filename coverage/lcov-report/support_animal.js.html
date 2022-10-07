@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for journal.js</title>
+    <title>Code coverage report for support_animal.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> journal.js</h1>
+        <h1><a href="index.html">All files</a> support_animal.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.85% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/7</span>
+                <span class='fraction'>3/6</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -80,10 +80,7 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a>
-<a name='L19'></a><a href='#L19'>19</a>
-<a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -91,12 +88,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -108,18 +102,15 @@ const { EmbedBuilder } = require("discord.js");
 &nbsp;
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("journal")
-    .setDescription("Gives a journal prompt that can benefit mental health"),
-&nbsp;
+    .setName("support_animal")
+    .setDescription("see an image of an adorable support animal"),
 <span class="fstat-no" title="function not covered" >  as</span>ync execute(interaction, options) {
 <span class="cstat-no" title="statement not covered" >    num = Math.floor(Math.random() * options.length);</span>
-<span class="cstat-no" title="statement not covered" >  console.log('interaction\n', interaction);</span>
-    const embed = <span class="cstat-no" title="statement not covered" >new EmbedBuilder()</span>
-      .setColor(0x0099ff)
-      .setTitle(options[num][0])
-      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
-      .setDescription("answer this journal prompt");
 &nbsp;
+    const embed = <span class="cstat-no" title="statement not covered" >new EmbedBuilder()</span>
+      .setColor("#FFFFFF")
+      .setTitle("You got this!")
+      .setImage(options[num][0])
     const messageId = <span class="cstat-no" title="statement not covered" >interaction.reply({ embeds: [embed] });</span>
   },
 };

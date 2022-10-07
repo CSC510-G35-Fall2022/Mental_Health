@@ -4,7 +4,7 @@ const { EmbedBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("journal")
-    .setDescription("Replies with pong"),
+    .setDescription("Gives a journal prompt that can benefit mental health"),
 
   async execute(interaction, options) {
     num = Math.floor(Math.random() * options.length);
