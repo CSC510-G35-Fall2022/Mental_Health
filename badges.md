@@ -5,7 +5,7 @@
 [![last commit][last-commit]][last-commit-url]
 [![license][license]][license-url]
 [![coverage][coverage]][coverage-url]
-[![DOI](https://zenodo.org/badge/531546264.svg)](https://zenodo.org/badge/latestdoi/531546264)
+[![DOI](https://zenodo.org/badge/534256335.svg)](https://zenodo.org/badge/latestdoi/534256335)
 ![size][size]
 [![issues][issues]][issues-url]
 [![issues-closed][issues-closed]][issues-closed-url]
