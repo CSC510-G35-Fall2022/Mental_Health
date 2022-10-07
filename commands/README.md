@@ -1,4 +1,4 @@
-###COMMANDS
+### COMMANDS
 
 This folder consists of all the commands. Each command has its own file.
 
