@@ -4,5 +4,8 @@
     },
     "contribution": {
         "title": "How to Contribute"
+    },
+    "documentation": {
+        "title": "Project Documentation"
     }
 }
