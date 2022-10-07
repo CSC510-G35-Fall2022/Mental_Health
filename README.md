@@ -25,6 +25,17 @@ The following functionalities (commands) describe how we are meeting our purpose
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.44%20AM.png" width=700>
 
+**Diet Reccomendation Command**: provides random diet tips
+
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.46.13%20PM.png" width=500>
+
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.46.39%20PM.png" width=500>
+
+**Help Command**: provides a list and description of existing commands
+
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.47.32%20PM.png" width=500>
+
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%209.48.21%20PM.png" width=500>
 
 ## Install instructions
 Please refer to [Install.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/install.MD) for more in-depth instructions
