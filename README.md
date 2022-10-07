@@ -23,7 +23,7 @@ The following functionalities (commands) describe **how** we are meeting our pur
 
 **Journal Command**: provides random journal-ing prompts for users to answer.
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.39.10%20PM.png?raw=true" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/se4.png?raw=true" width=500>
 <br/>
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.53.57%20PM.png?raw=true" width=500>
 
