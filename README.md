@@ -7,19 +7,19 @@ To incorporate aspects of mental well-being into discord usage. Aspects of socia
 
 The following functionalities (commands) describe how we are meeting our purpose of this project. They are up and running.
 
-**Journal Command**
+**Journal Command**: provides random journal-ing prompts for users to answer.
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.39.10%20PM.png" width=700>
 <br/>
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%203.53.57%20PM.png" width=700>
 
-**Support Animals Command**
+**Support Animals Command**: provides random images of cute animals
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.25%20PM.png" width=700>
 <br/>
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.16%20PM.png" width=700>
 
-**Puzzle Command**
+**Puzzle Command**: provides a puzzle game to challenge your mind!
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.40%20AM.png" width=700>
 
