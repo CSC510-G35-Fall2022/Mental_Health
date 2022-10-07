@@ -57,6 +57,8 @@ The following functionalities (commands) describe **how** we are meeting our pur
 
 **Resources Command**: provides Resources, Contacts for Mental Health
 
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/se2.png?raw=true" width=500>
+
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/se.png?raw=true" width=500>
 
 ## Install instructions
