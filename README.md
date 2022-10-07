@@ -3,9 +3,9 @@
 <br/>
 
 ### Purpose
-To incorporate aspects of mental well-being into discord usage. Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Certain functionalities such as reminding users to take a break and other functionalities that require a database have not yet been implemented. Below is a list of working functionalities as well as install and contributing instructions. 
+To incorporate aspects of mental well-being into discord usage. Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Below is a list of working functionalities as well as install and contributing instructions. 
 
-The following functionalities are up and running:
+The following functionalities (commands) describe how we are meeting our purpose of this project. They are up and running.
 
 **Journal Command**
 
@@ -15,13 +15,11 @@ The following functionalities are up and running:
 
 **Support Animals Command**
 
-
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.25%20PM.png" width=700>
 <br/>
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-05%20at%2010.13.16%20PM.png" width=700>
 
 **Puzzle Command**
-
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2011.07.40%20AM.png" width=700>
 
@@ -30,8 +28,6 @@ The following functionalities are up and running:
 
 ## Install instructions
 Please refer to [Install.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/install.MD) for more in-depth instructions
-
-
 
 ### Want to Contribute to the project?
 Please read this [Contributing.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/contributing.MD).
@@ -55,3 +51,12 @@ This project has the following contributors:
 Click [here](https://github.com/orgs/CSC510-G35-Fall2022/projects/1/views/1) for our roadmap
 
 The future roadmap has the issues organized showing future possible extensions to this project.
+
+## License
+
+This project is distributed under the Apache License. See `LICENSE.txt` for more information.
+
+## Zenodo DOI
+Click on the badge below to view the Zenodo DOI page for this project.
+
+[![DOI](https://zenodo.org/badge/534256335.svg)](https://zenodo.org/badge/latestdoi/534256335)
