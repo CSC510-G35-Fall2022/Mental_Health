@@ -38,12 +38,6 @@
 
 [watchers]: https://img.shields.io/github/watchers/CSC510-G35-Fall2022/Mental_Health?style=social
 
-<!-- [python]: https://img.shields.io/badge/python-%3E%3D3.0-blue
-[python-url]: https://www.python.org/
-
-[tests]: https://img.shields.io/badge/tests-4%20passed%2C%200%20failed-blue
-[tests-url]: https://github.com/maya-dc-patel/csc510-g35-hw1/tree/main/test -->
-
 [coverage]: https://img.shields.io/badge/coverage-73%25-orange
 [coverage-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/coverage/index.html
 
