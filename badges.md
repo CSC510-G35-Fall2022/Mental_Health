@@ -8,6 +8,7 @@
 [![DOI](https://zenodo.org/badge/531546264.svg)](https://zenodo.org/badge/latestdoi/531546264)
 ![size][size]
 [![issues][issues]][issues-url]
+[![issues-closed][issues-closed]][issues-closed-url]
 ![build][build]
 
 
@@ -20,13 +21,13 @@
 
 
 
-[contributors]: https://img.shields.io/github/contributors/CSC510-G35-Fall2022/Mental_Health?color=red
+[contributors]: https://img.shields.io/github/contributors/CSC510-G35-Fall2022/Mental_Health
 [contributors-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/graphs/contributors
 
-[last-commit]: https://img.shields.io/github/last-commit/CSC510-G35-Fall2022/Mental_Health?color=orange
+[last-commit]: https://img.shields.io/github/last-commit/CSC510-G35-Fall2022/Mental_Health
 [last-commit-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/commits/main
 
-[license]: https://img.shields.io/badge/license-Apache-blue?color=yellow
+[license]: https://img.shields.io/badge/license-Apache-blue
 [license-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/LICENSE
 
 [files]: https://github.com/CSC510-G35-Fall2022/Mental_Health
@@ -43,14 +44,17 @@
 [tests]: https://img.shields.io/badge/tests-4%20passed%2C%200%20failed-blue
 [tests-url]: https://github.com/maya-dc-patel/csc510-g35-hw1/tree/main/test -->
 
-[coverage]: https://img.shields.io/badge/coverage-73%25-orange?color=green
+[coverage]: https://img.shields.io/badge/coverage-73%25-orange
 [coverage-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/coverage/index.html
 
-[size]: https://img.shields.io/github/repo-size/CSC510-G35-Fall2022/Mental_Health?color=purple
+[size]: https://img.shields.io/github/repo-size/CSC510-G35-Fall2022/Mental_Health
 
 [issues]: https://img.shields.io/github/issues/CSC510-G35-Fall2022/Mental_Health?color=pink&label=Issues&logo=Issues
 [issues-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1
 
-[build]: https://img.shields.io/github/workflow/status/CSC510-G35-Fall2022/Mental_Health?color=green
+[issues-closed]: https://img.shields.io/github/issues-closed/CSC510-G35-Fall2022/Mental_Health?color=pink&label=Issues&logo=Issues
+[issues-closed-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1
+
+[build]: https://img.shields.io/github/workflow/status/CSC510-G35-Fall2022/Mental_Health/actions
 
 
