@@ -23,6 +23,7 @@
     "test_commands": "jest --coverage",
     "doc": "jsdoc -r README.md ./commands ./code/main.js -u ./tutorials -d ./docs",
     "syntax": "syntax-checker code/ commands/ test/",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "audit": "npm audit fix"
   }
 }
