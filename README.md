@@ -68,9 +68,9 @@ The following functionalities (commands) describe **how** we are meeting our pur
 
 **Music Command**: Provides links for meditation and music to relax.
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/music_cmd/images/music_des.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/music_cmd/images/music_des.png?raw=true" width=500>
 
-<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/music_cmd/images/music_ss.png" width=500>
+<img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/music_cmd/images/music_ss.png?raw=true" width=500>
 
 ## Install instructions
 
