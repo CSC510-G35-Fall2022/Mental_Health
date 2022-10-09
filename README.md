@@ -105,12 +105,12 @@ When the bot is being finally deployed the slash commands must be registerd glob
 
 This project is distributed under the Apache License. See `LICENSE.txt` for more information.
 
+## Two Minute Functionality Video
+[click here](https://youtu.be/i5oxS1ZplWQ)
+
 ## Zenodo DOI
 
 Click on the badge below to view the Zenodo DOI page for this project.
-
-## Two Minute Functionality Video
-[click here](https://youtu.be/i5oxS1ZplWQ)
 
 [![DOI](https://zenodo.org/badge/534256335.svg)](https://zenodo.org/badge/latestdoi/534256335)
 
