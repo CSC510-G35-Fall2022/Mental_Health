@@ -7,7 +7,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
  */
 module.exports = {
   /**
-   * Slash command for help command
+   * Slash command for resources command
    *
    * @property {object} data - A slash command object
    * @property {string} data.name - Name of the slash command
