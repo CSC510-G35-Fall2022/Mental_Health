@@ -96,6 +96,10 @@ Click [here](https://github.com/orgs/CSC510-G35-Fall2022/projects/1/views/1) for
 
 The future roadmap has the issues organized showing future possible extensions to this project.
 
+## Final Bot Deployment
+
+When the bot is being finally deployed the slash commands must be registerd globally (registerd for every server). Right now (for development purposes), the slash commands are registered per guild mentioned in line 19. To register commands globally during final deployment, edit line 73 in main.js to remove slash commands being registerd for each server.
+
 ## License
 
 This project is distributed under the Apache License. See `LICENSE.txt` for more information.
