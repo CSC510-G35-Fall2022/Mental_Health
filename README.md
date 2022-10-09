@@ -109,6 +109,9 @@ This project is distributed under the Apache License. See `LICENSE.txt` for more
 
 Click on the badge below to view the Zenodo DOI page for this project.
 
+## Two Minute Functionality Video
+[click here](https://youtu.be/i5oxS1ZplWQ)
+
 [![DOI](https://zenodo.org/badge/534256335.svg)](https://zenodo.org/badge/latestdoi/534256335)
 
 [contributors]: https://img.shields.io/github/contributors/CSC510-G35-Fall2022/Mental_Health
