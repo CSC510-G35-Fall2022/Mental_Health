@@ -10,6 +10,8 @@
 ![forks][forks]
 ![stars][stars]
 ![watchers][watchers]
+[![node][node]][node-url]
+[![discord.js][discord.js]][discord.js-url]
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png?raw=true" width=1200>
  
@@ -71,6 +73,12 @@ The following functionalities (commands) describe **how** we are meeting our pur
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/music_cmd/images/music_ss.png" width=500>
 
 ## Install instructions
+
+This project uses discord.js version 14.5.0 and node version 16.17.0.
+
+[![node][node]][node-url]
+
+[![discord.js][discord.js]][discord.js-url]
 
 Please refer to [Install.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/INSTALL.md) for more in-depth instructions
 
@@ -137,3 +145,9 @@ Click on the badge below to view the Zenodo DOI page for this project.
 [build]: https://img.shields.io/github/workflow/status/CSC510-G35-FALL2022/Mental_Health/Node1.js%20CI
 
 [build-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1](https://github.com/CSC510-G35-Fall2022/Mental_Health/actions
+
+[node]: https://img.shields.io/badge/node-v16.17.0-blue
+[node-url]: https://nodejs.org/en/download/
+
+[discord.js]: https://img.shields.io/badge/discord.js-v14.5.0-blue
+[discord.js-url]: https://discord.js.org/#/
