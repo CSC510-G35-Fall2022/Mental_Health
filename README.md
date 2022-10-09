@@ -22,8 +22,6 @@ To incorporate aspects of mental well-being into discord usage. Aspects of socia
 ### Functionality
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/15055915/194737728-c61e1af2-f5f9-4dcd-8603-6440d2008c30.gif)
 
-[Also available as a short video](https://youtu.be/ZtUKSjWVpeo)
-
 The following functionalities (commands) describe **how** we are meeting our purpose of this project. They are up and running.
 
 **Journal Command**: provides random journal-ing prompts for users to answer.
@@ -111,7 +109,7 @@ When the bot is being finally deployed the slash commands must be registerd glob
 This project is distributed under the Apache License. See `LICENSE.txt` for more information.
 
 ## Two Minute Functionality Video
-[click here](https://youtu.be/i5oxS1ZplWQ) or see inside the [videos folder](https://github.com/CSC510-G35-Fall2022/Mental_Health/tree/main/videos).
+see 2MinVideo inside the [videos folder](https://github.com/CSC510-G35-Fall2022/Mental_Health/tree/main/videos).
 
 ## Zenodo DOI
 
