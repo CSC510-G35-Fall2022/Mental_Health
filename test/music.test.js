@@ -1,4 +1,3 @@
-
 const music = require("../commands/music.js");
 const {
   Discord,

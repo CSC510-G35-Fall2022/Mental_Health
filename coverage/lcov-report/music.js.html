@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for journal.js</title>
+    <title>Code coverage report for music.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> journal.js</h1>
+        <h1><a href="index.html">All files</a> music.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/6</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">28.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/6</span>
+                <span class='fraction'>2/7</span>
             </div>
         
             
@@ -110,7 +110,12 @@
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -136,16 +141,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,38 +151,57 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 &nbsp;
 /**
- * Slash command for journal
+ * Slash command for music command
  *
- * @exports journal
+ * @exports music
  */
 module.exports = {
   /**
-   * Slash command for journal command
+   * Slash command for music command
    *
    * @property {object} data - A slash command object
    * @property {string} data.name - Name of the slash command
    * @property {string} data.description - Description of the slash command
    */
   data: new SlashCommandBuilder()
-    .setName("journal")
-    .setDescription("Gives a journal prompt that can benefit mental health"),
+    .setName("music")
+    .setDescription("Provides soothing music and calmimg meditation"),
   /**
-   * Executes the journal command
+   * Executes the music command
    *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
-   * @param {Array&lt;string&gt;} options - List of journal entires
    */
-<span class="fstat-no" title="function not covered" >  as</span>ync execute(interaction, options) {
-<span class="cstat-no" title="statement not covered" >    num = Math.floor(Math.random() * options.length);</span>
-<span class="cstat-no" title="statement not covered" >    console.log("interaction\n", interaction);</span>
+<span class="fstat-no" title="function not covered" >  as</span>ync execute(interaction) {
+    var fields=<span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >      fields.push({</span>
+        name: 'Soothing music \n',
+        value: 'https://www.youtube.com/watch?v=McA5ZevQ8q4',
+      });
+<span class="cstat-no" title="statement not covered" >      fields.push({</span>
+        name: 'Calming Medidation \n',
+        value: 'https://www.youtube.com/watch?v=Xl_B45DpMLU',
+      });
     /**
      * Embedded object
      *
@@ -193,18 +209,17 @@ module.exports = {
      * @property {object} embed - Embed object
      * @property {object} embed.color - Color of the embed
      * @property {string} embed.title - Title of the embed
-     * @property {color} embed.thumbnail - Thumbnail of the embed
-     * @property {string} embed.description - Description of the embed
+     * @property {color} embed.description - Description to be displayed in embed
      */
     const embed = <span class="cstat-no" title="statement not covered" >new EmbedBuilder()</span>
-      .setColor(0x0099ff)
-      .setTitle(options[num][0])
-      .setThumbnail("https://cdn-icons-png.flaticon.com/512/3352/3352475.png")
-      .setDescription("answer this journal prompt");
-    const messageId = <span class="cstat-no" title="statement not covered" >interaction.reply({ embeds: [embed] });</span>
+      .setColor(0x746abd)
+      .setTitle("Music and Meditation links")
+      .addFields(fields);
+<span class="cstat-no" title="statement not covered" >    return interaction.reply({</span>
+      embeds: [embed],
+    });
   },
-};
-&nbsp;</pre></td></tr></table></pre>
+};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

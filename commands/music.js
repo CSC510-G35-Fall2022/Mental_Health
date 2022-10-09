@@ -24,15 +24,15 @@ module.exports = {
    * @param {object} interaction - Current discord interaction
    */
   async execute(interaction) {
-    var fields=[];
-      fields.push({
-        name: 'Soothing music \n',
-        value: 'https://www.youtube.com/watch?v=McA5ZevQ8q4',
-      });
-      fields.push({
-        name: 'Calming Medidation \n',
-        value: 'https://www.youtube.com/watch?v=Xl_B45DpMLU',
-      });
+    var fields = [];
+    fields.push({
+      name: "Soothing music \n",
+      value: "https://www.youtube.com/watch?v=McA5ZevQ8q4",
+    });
+    fields.push({
+      name: "Calming Medidation \n",
+      value: "https://www.youtube.com/watch?v=Xl_B45DpMLU",
+    });
     /**
      * Embedded object
      *
