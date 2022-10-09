@@ -72,7 +72,9 @@ npm install standard --save-dev
 ```
 
 2. Run
-   `npx standard`
+   ```
+   npm test
+   ```
 
 ### Testing the commands:
 
