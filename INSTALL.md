@@ -58,7 +58,9 @@ npm install discord.js
 npm install dotenv --save
 ```
 
-3. Run the main.js file
+3. Copy the GuildId for the server by right clicking on the discord server, then Copy ID. Add this ID in line 19 of the `main.js` file. 
+
+4. Run the `main`.js file
    `node main.js`
 
 ### Run Style Check
