@@ -19,6 +19,11 @@
 
 To incorporate aspects of mental well-being into discord usage. Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Below is a list of working functionalities as well as install and contributing instructions. **Spread kindness, more meaningful days, and emotional support over Discord by contributing!**
 
+### Functionality
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/15055915/194737728-c61e1af2-f5f9-4dcd-8603-6440d2008c30.gif)
+
+[Also available as a short video](https://youtu.be/ZtUKSjWVpeo)
+
 The following functionalities (commands) describe **how** we are meeting our purpose of this project. They are up and running.
 
 **Journal Command**: provides random journal-ing prompts for users to answer.
