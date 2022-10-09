@@ -10,14 +10,19 @@
 ![forks][forks]
 ![stars][stars]
 ![watchers][watchers]
+[![node][node]][node-url]
+[![discord.js][discord.js]][discord.js-url]
 
 <img src="https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/images/Screen%20Shot%202022-10-06%20at%2010.06.31%20PM.png?raw=true" width=1200>
  
 <br/>
 
 ### Purpose
+#### To incorporate aspects of mental well-being into discord usage. 
+Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Below is a list of working functionalities as well as install and contributing instructions. **Spread kindness, more meaningful days, and emotional support over Discord by contributing!**
 
-To incorporate aspects of mental well-being into discord usage. Aspects of social media have become detrimental to mental health, and since many people spend hours a day on Discord, this bot is here to help users improve their mental health as they use Discord. Below is a list of working functionalities as well as install and contributing instructions. **Spread kindness, more meaningful days, and emotional support over Discord by contributing!**
+### Functionality
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/15055915/194737728-c61e1af2-f5f9-4dcd-8603-6440d2008c30.gif)
 
 The following functionalities (commands) describe **how** we are meeting our purpose of this project. They are up and running.
 
@@ -69,13 +74,19 @@ The following functionalities (commands) describe **how** we are meeting our pur
 
 ## Install instructions
 
-Please refer to [Install.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/INSTALL.md) for more in-depth instructions
+This project uses discord.js version 14.5.0 and node version 16.17.0.
+
+[![node][node]][node-url]
+
+[![discord.js][discord.js]][discord.js-url]
+
+Please refer to [INSTALL.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/INSTALL.md) for more in-depth instructions
 
 ### Want to Contribute to the project?
 
 Take a look at our [documentation](https://csc510-g35-fall2022.github.io/Mental_Health/index.html)
 <br/>
-Please read this [Contributing.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/contributing.MD).
+Please read this [CONTRIBUTING.md](https://github.com/CSC510-G35-Fall2022/Mental_Health/blob/main/CONTRIBUTING.md).
 <br/>
 View our [project roadmap](https://github.com/orgs/CSC510-G35-Fall2022/projects/1) for features to work on.
 
@@ -105,6 +116,13 @@ When the bot is being finally deployed the slash commands must be registerd glob
 
 This project is distributed under the Apache License. See `LICENSE.txt` for more information.
 
+## Two Minute Functionality Video
+Click for [two minute functionality video](https://youtu.be/e30PfLWmr9I)
+
+Also, see 2MinVideo inside the [videos folder](https://github.com/CSC510-G35-Fall2022/Mental_Health/tree/main/videos).
+
+Click for [short 30 second video](https://youtu.be/PLGKYqPPDtQ)
+
 ## Zenodo DOI
 
 Click on the badge below to view the Zenodo DOI page for this project.
@@ -131,3 +149,9 @@ Click on the badge below to view the Zenodo DOI page for this project.
 [build]: https://img.shields.io/github/workflow/status/CSC510-G35-FALL2022/Mental_Health/Node1.js%20CI
 
 [build-url]: https://github.com/orgs/CSC510-G35-Fall2022/projects/1](https://github.com/CSC510-G35-Fall2022/Mental_Health/actions
+
+[node]: https://img.shields.io/badge/node-v16.17.0-blue
+[node-url]: https://nodejs.org/en/download/
+
+[discord.js]: https://img.shields.io/badge/discord.js-v14.5.0-blue
+[discord.js-url]: https://discord.js.org/#/
