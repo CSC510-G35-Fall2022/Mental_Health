@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: commands/exercise.js</title>
+    <title>JSDoc: Source: commands/music.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: commands/exercise.js</h1>
+    <h1 class="page-title">Source: commands/music.js</h1>
 
     
 
@@ -29,53 +29,57 @@
             <pre class="prettyprint source linenums"><code>const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 /**
- * Slash command for exercise recommendations
+ * Slash command for resources command
  *
- * @exports exercise
+ * @exports resources
  */
 module.exports = {
   /**
-   * Slash command for exercise recommendations
+   * Slash command for help command
    *
-   * @type {object}
    * @property {object} data - A slash command object
    * @property {string} data.name - Name of the slash command
    * @property {string} data.description - Description of the slash command
    */
   data: new SlashCommandBuilder()
-    .setName("exercise")
-    .setDescription("Gets one ergonomic exercise to relax"),
+    .setName("music")
+    .setDescription("Provides soothing music and calmimg meditation"),
   /**
-   * Executes the exercise command
+   * Executes the resources command
    *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
-   * @param {Array&lt;string>} options - List of exercise tips
    */
-  async execute(interaction, options) {
-    console.log(options);
-    num = Math.floor(Math.random() * options.length);
-
-    /**
+  async execute(interaction) {
+     /**
      * Embedded object
      *
      * @member {object} embed
      * @property {object} embed - Embed object
-     * @property {color} embed.color - Color of the embed
+     * @property {object} embed.color - Color of the embed
      * @property {string} embed.title - Title of the embed
-     * @property {string} embed.description - Description of the embed
-     * @property {string} embed.images - Description of the image
+     * @property {color} embed.description - Description to be displayed in embed
      */
+    var fields=[];
+      fields.push({
+        name: 'Soothing music \n',
+        value: 'https://www.youtube.com/watch?v=McA5ZevQ8q4',
+      });
+      fields.push({
+        name: 'Calming Medidation \n',
+        value: 'https://www.youtube.com/watch?v=Xl_B45DpMLU',
+      });
+
     const embed = new EmbedBuilder()
-      .setColor("#FFFFFF")
-      .setTitle(options[num][0])
-      .setDescription(options[num][1])
-      .setImage(options[num][2]);
-    interaction.reply({ embeds: [embed] });
+      .setColor(0x746abd)
+      .setTitle("Music and Meditation links")
+      .addFields(fields);
+    return interaction.reply({
+      embeds: [embed],
+    });
   },
-};
-</code></pre>
+};</code></pre>
         </article>
     </section>
 
