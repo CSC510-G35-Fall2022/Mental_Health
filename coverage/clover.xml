@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1665284019007" clover="3.2.0">
-  <project timestamp="1665284019007" name="All files">
+<coverage generated="1665284116447" clover="3.2.0">
+  <project timestamp="1665284116448" name="All files">
     <metrics statements="90" coveredstatements="19" conditionals="14" coveredconditionals="0" methods="10" coveredmethods="0" elements="114" coveredelements="19" complexity="0" loc="90" ncloc="90" packages="1" files="8" classes="8"/>
     <file name="exercise.js" path="/Users/sanjanacheerla/Mental_Health/commands/exercise.js">
       <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
