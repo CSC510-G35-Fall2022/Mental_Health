@@ -106,7 +106,7 @@ When the bot is being finally deployed the slash commands must be registerd glob
 This project is distributed under the Apache License. See `LICENSE.txt` for more information.
 
 ## Two Minute Functionality Video
-[click here](https://youtu.be/i5oxS1ZplWQ)
+[click here](https://youtu.be/i5oxS1ZplWQ) or see inside the [videos folder](https://github.com/CSC510-G35-Fall2022/Mental_Health/tree/main/videos).
 
 ## Zenodo DOI
 
