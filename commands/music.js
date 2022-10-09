@@ -1,13 +1,13 @@
 const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 /**
- * Slash command for resources command
+ * Slash command for music command
  *
- * @exports resources
+ * @exports music
  */
 module.exports = {
   /**
-   * Slash command for help command
+   * Slash command for music command
    *
    * @property {object} data - A slash command object
    * @property {string} data.name - Name of the slash command
@@ -17,22 +17,13 @@ module.exports = {
     .setName("music")
     .setDescription("Provides soothing music and calmimg meditation"),
   /**
-   * Executes the resources command
+   * Executes the music command
    *
    * @async
    * @function execute
    * @param {object} interaction - Current discord interaction
    */
   async execute(interaction) {
-     /**
-     * Embedded object
-     *
-     * @member {object} embed
-     * @property {object} embed - Embed object
-     * @property {object} embed.color - Color of the embed
-     * @property {string} embed.title - Title of the embed
-     * @property {color} embed.description - Description to be displayed in embed
-     */
     var fields=[];
       fields.push({
         name: 'Soothing music \n',
@@ -42,7 +33,15 @@ module.exports = {
         name: 'Calming Medidation \n',
         value: 'https://www.youtube.com/watch?v=Xl_B45DpMLU',
       });
-
+    /**
+     * Embedded object
+     *
+     * @member {object} embed
+     * @property {object} embed - Embed object
+     * @property {object} embed.color - Color of the embed
+     * @property {string} embed.title - Title of the embed
+     * @property {color} embed.description - Description to be displayed in embed
+     */
     const embed = new EmbedBuilder()
       .setColor(0x746abd)
       .setTitle("Music and Meditation links")
