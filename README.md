@@ -90,6 +90,9 @@ Please read this [CONTRIBUTING.md](https://github.com/CSC510-G35-Fall2022/Mental
 <br/>
 View our [project roadmap](https://github.com/orgs/CSC510-G35-Fall2022/projects/1) for features to work on.
 
+## Funding 
+Not a funded project, nor is funding necessary.
+
 ## Contributors
 
 This project has the following contributors:
