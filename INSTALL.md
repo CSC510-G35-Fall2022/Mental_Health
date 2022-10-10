@@ -127,3 +127,23 @@ npm run prettier
 ```
 npm run audit
 ```
+
+## Trouble Shooting common problems
+Problem: Bot not running properly, having issues with client ID.
+
+Solution: 
+1. Check if dependencies are set properly. 
+2. Reset the bot token on the discord developer portal.
+3. Paste new token in `.env` file. 
+4. Re-copy and paste client ID in `.env` file
+
+---
+
+Problem: Bot not responding to commands even though bot is running properly. 
+
+Solution: 
+1. Check main.js file line 44
+2. Turn on developer mode in settings
+3. Copy your server ID
+4. Paste your server ID in the `const guilds` array in line 44
+5. Re-run the code and it should work now.
