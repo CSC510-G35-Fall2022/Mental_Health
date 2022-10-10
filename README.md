@@ -130,14 +130,14 @@ Click for [short 30 second video](https://youtu.be/PLGKYqPPDtQ)
 
 Click on the badge below to view the Zenodo DOI page for this project.
 
+[![DOI](https://zenodo.org/badge/534256335.svg)](https://zenodo.org/badge/latestdoi/534256335)
+
 ## Testing 
 We are doing both automated and blackbox testing. The reason why our coverage is 40% is because that coverage person only measures coverage from the automated tests. The rest of the 60% coverage is covered using black box tests. We used black box tests because we had to test the discord functionality which was only testable when the bot would be running through discord. This made it impossible to test using automated testing which was why we used blackbox.
 
 ## Case Studies
 1) Tested the bot under our team communication server. We tested each of the currently available functionalities: Ping, journal, Puzzle, Diet-recommendation, Support animal, Music, Exercise, Resources, and Help. All of the functionaliies work as intended. Last updated Oct 9 2022.
 2) Tested the bot with a friends server on discord (Does not go to NCSU). They tested each of the currently available functionalities: Ping, journal, Puzzle, Diet-recommendation, Support animal, Music, Exercise, Resources, and Help. All of the functionaliies work as intended. Last updated Oct 9 2022.
-
-[![DOI](https://zenodo.org/badge/534256335.svg)](https://zenodo.org/badge/latestdoi/534256335)
 
 [contributors]: https://img.shields.io/github/contributors/CSC510-G35-Fall2022/Mental_Health
 [contributors-url]: https://github.com/CSC510-G35-Fall2022/Mental_Health/graphs/contributors
