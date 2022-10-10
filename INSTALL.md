@@ -72,9 +72,10 @@ npm install standard --save-dev
 ```
 
 2. Run
-   ```
-   npm test
-   ```
+   
+```
+npm test
+```
 
 ### Testing the commands:
 
@@ -127,6 +128,24 @@ npm run prettier
 ```
 npm run audit
 ```
+
+## Dependencies 
+| dependency              | version | link                                                                                                                                                      | mandatory/optional |
+|-------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|
+| csv parse               | ^5.3.0  | https://www.npmjs.com/package/csv-parse                                                                                                                   | mandatory          |
+| discord interactions    | ^3.2.0  | https://discord.js.org/#/                                                                                                                                 | mandatory          |
+| discord.js              | ^14.3.0 | https://discord.js.org/#/                                                                                                                                 | mandatory          |
+| dotenv                  | ^16.0.2 | https://www.npmjs.com/package/dotenv                                                                                                                      | mandatory          |
+| jest-discordjs-mocks    | ^1.0.2  | https://github.com/discordjs/discord.js/discussions/6179                                                                                                  | optional           |
+| babel/core              | ^7.19.3 | https://www.google.com/search?q=babel+npm&rlz=1C5CHFA_enUS847US847&oq=babel+npm&aqs=chrome..69i57j0i512l2j0i22i30l7.1757j0j4&sourceid=chrome&ie=UTF-8     | optional           |
+| babel/preset-env        | ^7.19.3 | https://babeljs.io/docs/en/babel-preset-env                                                                                                               | optional           |
+| babel/preset-typescript | ^7.19.3 | https://babeljs.io/docs/en/babel-preset-typescript                                                                                                        | optional           |
+| babel-jest              | ^29.1.1 | https://www.npmjs.com/package/babel-jest                                                                                                                  | optional           |
+| jest                    | ^29.1.2 | https://jestjs.io/                                                                                                                                        | mandatory          |
+| jsdoc                   | ^3.6.1  | https://jsdoc.app/                                                                                                                                        | mandatory          |
+| prettier                | ^2.7.1  | https://www.google.com/search?q=prettier+npm&rlz=1C5CHFA_enUS847US847&oq=prettier+npm&aqs=chrome..69i57j0i512l3j0i390l2.1756j0j4&sourceid=chrome&ie=UTF-8 | mandatory          |
+| standard                | ^17.0.0 | https://standardjs.com/                                                                                                                                   | mandatory          |
+| ts-test                 | ^29.0.3 | https://www.npmjs.com/package/ts-jest                                                                                                                     | optional           |
 
 ## Trouble Shooting common problems
 Problem: Bot not running properly, having issues with client ID.
